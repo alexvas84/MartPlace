@@ -10,6 +10,7 @@ html {
 
 a {
 	display: inline-block;
+	text-decoration: none;
 }
 
 ul,
@@ -19,10 +20,21 @@ li {
 	list-style: none;
 }
 
-body {}
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 500;
+}
 
 .container {
-	max-width: 1200px;
+	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.btn {
+	font-size: 14px;
+	color: #fff;
+	border-radius: 28px;
+	background-color: $btn;
+	font-weight: 400;
 }
