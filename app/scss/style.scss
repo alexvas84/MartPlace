@@ -1,12 +1,13 @@
 @import 'vars';
 @import 'global';
 
+// Header-top
+
 .header__top {
 	background-color: $grey;
 }
 
 .header {
-
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -27,12 +28,6 @@
 			margin-left: 28px;
 		}
 	}
-
-	&__bell {}
-
-	&__mail {}
-
-	&__bascet {}
 
 	&__client {
 		display: flex;
@@ -71,8 +66,6 @@
 
 .header {
 
-	&__bottom {}
-
 	&__bottom-inner {
 		display: flex;
 		justify-content: space-between;
@@ -87,13 +80,10 @@
 		height: 20px;
 	}
 
-	&__menu {}
-
 	&__inner-search {
 		flex: 0 1 360px;
 	}
 }
-
 
 .menu {
 	li+li {
@@ -151,7 +141,6 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-
 }
 
 .num {
@@ -181,6 +170,8 @@
 .header__bascet span {
 	background-color: #0674ec;
 }
+
+// Search section
 
 .search {
 	text-align: center;
@@ -238,7 +229,6 @@
 		transform: translateY(50%);
 		left: calc((100vw - 1140px)/2);
 
-
 		&::after {
 			content: '';
 			position: absolute;
@@ -249,7 +239,6 @@
 			border-top-right-radius: 6px;
 			top: -13px;
 			left: 15px;
-
 		}
 
 		&::before {
@@ -262,7 +251,6 @@
 			border-top-right-radius: 6px;
 			top: -26px;
 			left: 30px;
-
 		}
 
 		input {
@@ -288,6 +276,7 @@
 			width: 100%;
 			height: 55px;
 			border: 1px solid #dcdcdc;
+			border-left: 1px solid transparent;
 			padding-left: 20px;
 			padding-right: 53px;
 			outline: none;
@@ -297,12 +286,9 @@
 			color: #555;
 			border-top-right-radius: 3px;
 			border-bottom-right-radius: 3px;
-
-
 		}
 
 		&-btn {
-
 			border-radius: 3px;
 			border: none;
 			font-size: 16px;
@@ -318,7 +304,8 @@
 .select {
 	position: relative;
 	display: inline-block;
-	margin-left: -5px;
+	margin-left: -4px;
+
 
 	&::before {
 		content: '';
@@ -332,5 +319,56 @@
 		transform: translateY(-50%);
 		pointer-events: none;
 		right: 20px;
+	}
+}
+
+// advantages section
+
+.advantages {
+
+	&__inner {
+		padding-top: 185px;
+		padding-bottom: 120px;
+	}
+
+	&__box {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__item {
+		max-width: 360px;
+		padding: 40px 30px;
+
+		&.shadow {
+			border-radius: 4px;
+			box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	&__item-img {
+		height: 120px;
+		width: 120px;
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&__item-title {
+		font-size: 24px;
+		font-weight: 400;
+		margin-top: 34px;
+		margin-bottom: 20px;
+		color: #010101;
+	}
+
+	&__item-text {
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: 400;
 	}
 }
