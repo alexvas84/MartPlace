@@ -336,7 +336,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 	}
 
 	&__item {
@@ -371,4 +370,157 @@
 		line-height: 30px;
 		font-weight: 400;
 	}
+}
+
+
+
+// Featured products
+
+.featured {
+	&__inner {
+		background-color: #eff1f5;
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	&__box {
+		margin-bottom: 50px;
+	}
+
+	&__box-title {
+		background-color: #fff;
+		border-radius: 4px;
+		box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+		font-size: 30px;
+		font-weight: 400;
+		padding-left: 30px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		padding-right: 140px;
+
+	}
+
+	&__products {}
+
+	&__product-cart {
+		display: flex;
+	}
+}
+
+.product-cart {
+
+	&__img {
+		flex: 0 1 50%;
+		min-height: 450px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-color: #4e5760;
+
+	}
+
+	&__info {
+		flex: 0 1 50%;
+		padding: 48px 40px 24px 50px;
+		background-color: #fff;
+	}
+}
+
+.info {
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 14px;
+		color: #000;
+	}
+
+	&__product {
+		margin-bottom: 27px;
+		display: flex;
+		align-items: center;
+
+	}
+
+	&__product-dev {
+		display: flex;
+		align-items: center;
+	}
+
+	&__product-type {
+		display: flex;
+		align-items: center;
+		margin-left: 20px;
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+		color: #555555;
+		margin-bottom: 32px;
+	}
+
+	&__tags {
+		margin-bottom: 44px;
+	}
+
+	&__tags-title {
+		font-size: 15px;
+		line-height: 30px;
+		color: #868c96;
+		background-color: #f1f3f6;
+		border-radius: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&__price {
+		border-top: 1px solid #ececec;
+		padding-top: 30px;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__price-price {}
+
+	&__price-likes {}
+
+	&__price-sell {
+		margin-right: auto;
+	}
+
+	&__price-stars {}
+}
+
+.product-type__logo {
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.product-type__name {
+	font-size: 15px;
+	line-height: 30px;
+	color: #7347c1;
+	margin-left: 8px;
+}
+
+.info__product-logo {
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: #7347c1;
+	border-radius: 50%;
+}
+
+.info__product-name {
+	margin-left: 8px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 30px;
 }
