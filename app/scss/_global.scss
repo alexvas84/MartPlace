@@ -38,8 +38,60 @@ body {
 
 .btn {
 	font-size: 14px;
+	line-height: 14px;
 	color: #fff;
 	border-radius: 28px;
 	background-color: $btn;
 	font-weight: 400;
+	padding: 20px 30px;
+	cursor: pointer;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: 400;
+	max-width: 800px;
+}
+
+.tag {
+	font-size: 15px;
+	line-height: 30px;
+	color: #868c96;
+	background-color: #f1f3f6;
+	border-radius: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: none;
+	cursor: pointer;
+}
+
+.product-wp::before {
+	content: '\f19a';
+	font-family: 'icomoon';
+	color: #7347c1;
+	font-size: 15px;
+	position: absolute;
+	left: 0;
+
+}
+
+.product-psd::before {
+	content: '\f1c4';
+	font-family: 'icomoon';
+	color: #7347c1;
+	font-size: 15px;
+	position: absolute;
+	left: 0;
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	min-height: 110px;
+	margin-bottom: 30px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+	padding: 0 30px;
 }

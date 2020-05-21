@@ -382,17 +382,7 @@
 		margin-bottom: 50px;
 	}
 
-	&__box-title {
-		background-color: #fff;
-		border-radius: 4px;
-		box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-		font-size: 30px;
-		font-weight: 400;
-		padding-left: 30px;
-		padding-top: 40px;
-		padding-bottom: 40px;
-		padding-right: 140px;
-	}
+	&__box-title {}
 
 	&__product-cart {
 		display: flex;
@@ -567,6 +557,7 @@
 		margin-bottom: 44px;
 	}
 
+
 	&__tags-title {
 		font-size: 15px;
 		line-height: 30px;
@@ -634,20 +625,315 @@
 	}
 }
 
-.product-wp {
-	padding-left: 25px;
-	font-size: 15px;
-	line-height: 30px;
-	color: #7347c1;
-	position: relative;
 
-	&::before {
-		content: '\f19a';
-		font-family: 'icomoon';
-		color: #7347c1;
-		font-size: 15px;
-		position: absolute;
-		left: 0;
 
+// start new item
+
+.newitem {
+	background-color: #f6f7fb;
+	padding: 120px 0;
+
+	&__title-box {
+		position: relative;
+	}
+
+	&__filter {
+		font-size: 16px;
+		line-height: 22px;
+		color: #747b86;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+
+		.filter-btn {
+			position: relative;
+			margin: 0 auto;
+			height: 22px;
+			width: 15px;
+			cursor: pointer;
+			margin-left: 15px;
+		}
+
+		.filter-btn::after {
+			content: '';
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			background-color: #a3b1c4;
+			border-radius: 50%;
+			top: 0;
+			right: 0;
+			box-shadow: 0px 8px 0px 0px #a3b1c4, 0px 16px 0px 0px #a3b1c4, ;
+		}
 	}
 }
+
+.newitem__inner {
+	&-btn {
+		background-color: #fff;
+		padding: 30px;
+		border-radius: 4px;
+		box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
+		margin-bottom: 30px;
+
+		.tag+.tag {
+			margin-left: 9px;
+		}
+	}
+
+	&-box {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&-btn--all {
+		display: block;
+		margin: 30px auto 0;
+		border: none;
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+.product__cart {
+	overflow: hidden;
+	max-width: 360px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+	margin-bottom: 30px;
+
+	&-image {
+		position: relative;
+
+	}
+
+	&-image:hover .product__cart-image--buttons {
+		height: 100%;
+
+	}
+
+	&-image--img {
+		display: block;
+		background-color: #009688;
+		min-height: 230px;
+		// height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+	}
+
+	&-image--buttons {
+		overflow: hidden;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		bottom: 0;
+		height: 0;
+		width: 100%;
+		transition: all .3s ease;
+		font-size: 15px;
+		font-weight: 500;
+		background: linear-gradient(to right, rgba(111, 73, 183, 1) 0%, rgba(13, 113, 222, 1) 100%);
+
+		.buttons-info {
+			background: transparent;
+			border: 1px solid #fff;
+			margin-right: 9px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttons-demo {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	&-info {
+		padding: 30px 27px 16px 27px;
+
+		.cart-info {
+
+			&__title {
+				font-size: 20px;
+				line-height: 20px;
+				color: #000;
+				margin-bottom: 15px;
+			}
+
+			&__product {
+				margin-bottom: 27px;
+				display: flex;
+				align-items: center;
+			}
+
+			&__product-dev {
+				display: flex;
+				align-items: center;
+
+				.cart-info__product-logo {
+					width: 28px;
+					height: 28px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					background-color: #7347c1;
+					border-radius: 50%;
+				}
+
+				.cart-info__product-name {
+					margin-left: 5px;
+					font-size: 15px;
+					font-weight: 400;
+					line-height: 30px;
+					color: #000;
+				}
+			}
+
+			&__product-type {
+				margin-left: 20px;
+				padding-left: 25px;
+				font-size: 15px;
+				line-height: 30px;
+				color: #7347c1;
+				position: relative;
+			}
+
+			&__text {
+				font-size: 16px;
+				line-height: 30px;
+				color: #555555;
+				margin-bottom: 26px;
+			}
+
+			&__price {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-top: 1px solid #ececec;
+				border-top: 15px;
+				font-size: 15px;
+				line-height: 30px;
+
+				&-price {
+					color: $btn;
+					background-color: #e6f1fd;
+					padding-left: 15px;
+					padding-right: 15px;
+					border-radius: 30px;
+					margin-right: 10px;
+				}
+
+				&-likes {
+					color: #555;
+					padding-left: 22px;
+					position: relative;
+					margin-right: 19px;
+					font-weight: 400;
+
+					&::before {
+						content: '\f08a';
+						font-family: 'icomoon';
+						color: #9878d2;
+						font-size: 15px;
+						position: absolute;
+						left: 0;
+					}
+				}
+
+				&-sell {
+					margin-left: auto;
+					font-size: 15px;
+					line-height: 30px;
+					color: $btn;
+					position: relative;
+					padding-left: 23px;
+					font-weight: 400;
+
+					&::before {
+						content: '\f07a';
+						font-family: 'icomoon';
+						color: $btn;
+						font-size: 15px;
+						position: absolute;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.category-psd .product__cart-image--img {
+	background-color: #3c6490;
+}
+
+.filter-box {
+	position: absolute;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+	max-width: 183px;
+	width: 100%;
+	padding: 25px;
+	top: 103px;
+	right: 7px;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+
+	&._active {
+		top: 83px;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 7px 13px 7px;
+		border-color: transparent transparent #fff transparent;
+		box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+		top: -12px;
+		right: 19px;
+	}
+
+	li+li {
+		padding-top: 10px;
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 15px;
+		line-height: 15px;
+		color: #747b86;
+	}
+
+	&__link:hover {
+		color: $btn;
+	}
+}
+
+.mixitup-control-active {
+	background-color: $btn;
+	color: #fff;
+}
+
+
+//end new item
+
+//start followers feed
+
+.feed {
+	background-color: #eff1f5;
+	padding: 120px 0;
+}
+
+//end followers feed
