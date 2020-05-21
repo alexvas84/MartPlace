@@ -9,9 +9,18 @@ $(function () {
 	});
 
 	$('.featured__products').slick({
-		prevArrow: '<button type = "button" class= "slick-prev" ></button>',
-		nextArrow: '<button type = "button" class= "slick-next" ></button>'
+		prevArrow: '<button type = "button" class= "slick-prev"></button>',
+		nextArrow: '<button type = "button" class= "slick-next"></button>'
 	});
+
+	$('.feed__products').slick({
+		prevArrow: '<button type = "button" class= "slick-prev"></button>',
+		nextArrow: '<button type = "button" class= "slick-next"></button>',
+		slidesToShow: 3,
+		slidesToScroll: 3
+	});
+
+
 
 	var mixer = mixitup('.newitem__inner-box');
 

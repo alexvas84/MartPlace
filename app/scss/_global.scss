@@ -23,6 +23,7 @@ li {
 body {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 500;
+
 }
 
 .container {
@@ -94,4 +95,40 @@ body {
 	border-radius: 4px;
 	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
 	padding: 0 30px;
+}
+
+.slick-next {
+	padding-right: 26px;
+	padding-left: 21px;
+	top: -133px;
+	right: 30px;
+	border-top-right-radius: 44px;
+	border-bottom-right-radius: 44px;
+	outline: none;
+
+	&::before {
+		content: '\f105';
+		font-family: 'icomoon';
+		font-size: 14px;
+		line-height: 14px;
+		color: #fff;
+	}
+}
+
+.slick-prev {
+	padding-right: 21px;
+	padding-left: 26px;
+	top: -133px;
+	right: 82px;
+	border-top-left-radius: 44px;
+	border-bottom-left-radius: 44px;
+	outline: none;
+
+	&::before {
+		content: '\f104';
+		font-family: 'icomoon';
+		font-size: 14px;
+		line-height: 14px;
+		color: #fff;
+	}
 }
