@@ -19,7 +19,8 @@
 	font-display: swap;
 }
 
-i {
+[class^="icon-"],
+[class*=" icon-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon' !important;
 	speak: none;
@@ -34,8 +35,24 @@ i {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+	content: "\f002";
+}
+
 .icon-envelope-o:before {
 	content: "\f003";
+}
+
+.icon-clock-o:before {
+	content: "\f017";
+}
+
+.icon-lock:before {
+	content: "\f023";
+}
+
+.icon-map-marker:before {
+	content: "\f041";
 }
 
 .icon-leaf:before {
@@ -62,12 +79,24 @@ i {
 	content: "\f08a";
 }
 
+.icon-phone:before {
+	content: "\f095";
+}
+
 .icon-bell-o:before {
 	content: "\f0a2";
 }
 
 .icon-briefcase:before {
 	content: "\f0b1";
+}
+
+.icon-group:before {
+	content: "\f0c0";
+}
+
+.icon-users:before {
+	content: "\f0c0";
 }
 
 .icon-magic:before {
@@ -98,10 +127,22 @@ i {
 	content: "\f13b";
 }
 
+.icon-ellipsis-v:before {
+	content: "\f142";
+}
+
 .icon-wordpress:before {
 	content: "\f19a";
 }
 
 .icon-file-powerpoint-o:before {
 	content: "\f1c4";
+}
+
+.icon-drivers-license-o:before {
+	content: "\f2c3";
+}
+
+.icon-id-card-o:before {
+	content: "\f2c3";
 }

@@ -119,6 +119,7 @@
 			font-weight: 400;
 			border-radius: 23px;
 			border: 1px solid #d9dfe5;
+			outline: none;
 
 			&::placeholder {
 				color: #898f96
@@ -135,6 +136,19 @@
 		width: 70px;
 		border-radius: 23px;
 		cursor: pointer;
+		outline: none;
+
+		&::after {
+			content: '\f002';
+			font-family: 'icomoon';
+			color: #9878d2;
+			font-size: 15px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+		}
 	}
 }
 
@@ -267,6 +281,7 @@
 			padding-left: 28px;
 			padding-right: 20px;
 			display: inline-block;
+			outline: none;
 
 			&::placeholder {
 				font-size: 16px;
@@ -301,6 +316,7 @@
 			padding: 0 60px;
 			margin-left: 26px;
 			cursor: pointer;
+			outline: none;
 		}
 	}
 }
@@ -344,7 +360,10 @@
 		width: 100%;
 		padding: 40px 30px;
 		border-radius: 4px;
-		box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+
+		&.active {
+			box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+		}
 
 		&-img {
 			height: 120px;
@@ -607,24 +626,27 @@
 		align-items: center;
 
 		.filter-btn {
-			position: relative;
-			margin: 0 auto;
-			height: 22px;
-			width: 15px;
 			cursor: pointer;
-			margin-left: 15px;
-		}
+			background-color: transparent;
+			border: none;
+			height: 22px;
+			width: 22px;
+			color: #a3b1c4;
+			margin-left: 7px;
+			position: relative;
+			outline: none;
 
-		.filter-btn::after {
-			content: '';
-			position: absolute;
-			width: 5px;
-			height: 5px;
-			background-color: #a3b1c4;
-			border-radius: 50%;
-			top: 0;
-			right: 0;
-			box-shadow: 0px 8px 0px 0px #a3b1c4, 0px 16px 0px 0px #a3b1c4, ;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 5px;
+				height: 5px;
+				background-color: #a3b1c4;
+				border-radius: 50%;
+				top: 0;
+				right: 0;
+				box-shadow: 0px 8px 0px 0px #a3b1c4, 0px 16px 0px 0px #a3b1c4, ;
+			}
 		}
 	}
 }
@@ -933,24 +955,41 @@
 		width: 100%;
 		padding: 0 15px;
 
+		svg {
+			width: 50px;
+			height: 50px;
+		}
+
 		& .item1 {
 			color: #feb71d;
-			fill: #feb71d;
+
+			path {
+				fill: #feb71d;
+			}
 		}
 
 		& .item2 {
 			color: #58c9e9;
-			fill: #58c9e9;
+
+			path {
+				fill: #58c9e9;
+			}
 		}
 
 		& .item3 {
 			color: #77de51;
-			fill: #77de51;
+
+			path {
+				fill: #77de51;
+			}
 		}
 
 		& .item4 {
 			color: #ff6a6d;
-			fill: #ff6a6d;
+
+			path {
+				fill: #ff6a6d;
+			}
 		}
 
 		&-img {
@@ -990,23 +1029,6 @@
 		margin: 0 auto;
 	}
 
-	&__title {
-		font-size: 36px;
-		font-weight: 400;
-		margin-bottom: 21px;
-
-		span {
-			color: $btn;
-		}
-	}
-
-	&__text {
-		font-size: 16px;
-		line-height: 30px;
-		color: #555555;
-		margin-bottom: 50px;
-	}
-
 	&__items {
 		display: flex;
 		justify-content: space-between;
@@ -1022,7 +1044,50 @@
 		text-align: center;
 		border-radius: 4px;
 		box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
-		padding: 20px 30px;
+		padding: 56px 30px;
+
+		&-img {
+			svg {
+				width: 60px;
+				height: 60px;
+			}
+
+			&.item1 {
+				path {
+					fill: #0674ec;
+				}
+			}
+
+			&.item2 {
+				path {
+					fill: #7f4ec2;
+				}
+			}
+
+			&.item3 {
+				path {
+					fill: #77de51;
+				}
+			}
+
+			&.item4 {
+				path {
+					fill: #feb71d;
+				}
+			}
+
+			&.item5 {
+				path {
+					fill: #feb71d;
+				}
+			}
+
+			&.item6 {
+				path {
+					fill: #ff6a6d;
+				}
+			}
+		}
 
 		&-title {
 			font-size: 24px;
@@ -1034,7 +1099,6 @@
 			font-size: 16px;
 			line-height: 30px;
 			color: #555555;
-			margin-bottom: 32px;
 		}
 
 		&-num {
@@ -1050,3 +1114,57 @@
 }
 
 // end benefit
+
+// start invite
+
+.invite__inner {
+	display: flex;
+}
+
+.invite__item {
+	min-height: 560px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+	padding: 100px 0;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+
+	&-img {
+		max-width: 615px;
+		margin: 0 auto 48px;
+	}
+
+	&-title {
+		font-size: 36px;
+		font-weight: 400;
+		margin: 0 auto 28px;
+		max-width: 615px;
+	}
+
+	&-text {
+		max-width: 615px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+		margin: 0 auto 42px;
+	}
+
+	&-btn {
+		min-width: 190px;
+		background-color: #fff;
+		font-size: 16px;
+		font-weight: 400;
+
+		&.sell {
+			color: $btn;
+		}
+
+		&.buy {
+			color: #7347c1
+		}
+	}
+}
+
+//end invite

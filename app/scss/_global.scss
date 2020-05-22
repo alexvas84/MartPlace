@@ -33,8 +33,15 @@ body {
 }
 
 .container-fluid {
-	padding: 0 15px;
+	max-width: 100%;
 	margin: 0 auto;
+	// padding: 0 30px;
+}
+
+@media (max-width:720px) {
+	.container-fluid {
+		padding: 0 15px;
+	}
 }
 
 .btn {
@@ -46,6 +53,8 @@ body {
 	font-weight: 400;
 	padding: 20px 30px;
 	cursor: pointer;
+	outline: none;
+	border: none;
 }
 
 .title {
@@ -132,4 +141,26 @@ body {
 		line-height: 14px;
 		color: #fff;
 	}
+}
+
+.maintitle {
+	font-size: 36px;
+	font-weight: 400;
+	margin: 0 auto 21px;
+	max-width: 705px;
+	text-align: center;
+
+	span {
+		color: $btn;
+	}
+}
+
+.maintext {
+	font-size: 16px;
+	line-height: 30px;
+	color: #555555;
+	margin-bottom: 50px;
+	margin: 0 auto 50px;
+	max-width: 705px;
+	text-align: center;
 }
