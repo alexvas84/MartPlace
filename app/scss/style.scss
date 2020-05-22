@@ -141,13 +141,12 @@
 		&::after {
 			content: '\f002';
 			font-family: 'icomoon';
-			color: #9878d2;
+			color: #fff;
 			font-size: 15px;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			color: #fff;
 		}
 	}
 }
@@ -910,7 +909,6 @@
 	color: #fff;
 }
 
-
 //end new item
 
 //start followers feed
@@ -1078,7 +1076,7 @@
 
 			&.item5 {
 				path {
-					fill: #feb71d;
+					fill: #58c9e9;
 				}
 			}
 
@@ -1168,3 +1166,82 @@
 }
 
 //end invite
+
+//start feedback
+
+.feedback {
+	margin: 120px 0;
+	text-align: center;
+}
+
+.feedback__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.feedback__item {
+	max-width: 555px;
+	width: 100%;
+	padding: 50px 40px 30px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+	border-left: 2px solid $btn;
+	margin-bottom: 60px;
+	position: relative;
+
+	&::before {
+		content: '\f0e5';
+		font-family: 'icomoon';
+		font-size: 50px;
+		position: absolute;
+		top: 57px;
+		right: 43px;
+		color: #e8e8e8;
+
+	}
+
+	&-client {
+		display: flex;
+		align-items: center;
+		max-width: 410px;
+
+		.item-client__avatar {
+			width: 80px;
+			height: 80px;
+			background-color: #808080;
+			border-radius: 50%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			display: block;
+		}
+
+		.item-client__name {
+			font-size: 20px;
+			font-weight: 400;
+			margin-left: 18px;
+
+			span {
+				display: block;
+				font-size: 16px;
+				font-weight: 400;
+				color: #555555;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&-comment {
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: 400;
+		margin: 27px 0 23px;
+	}
+
+}
+
+.feedback__link {
+	margin: 0 auto;
+}
+
+//end feedback
