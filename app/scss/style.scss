@@ -137,17 +137,9 @@
 		border-radius: 23px;
 		cursor: pointer;
 		outline: none;
-
-		&::after {
-			content: '\f002';
-			font-family: 'icomoon';
-			color: #fff;
-			font-size: 15px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
+		background: url(../images/icons/search.svg) center no-repeat;
+		background-size: 15px;
+		background-color: $btn;
 	}
 }
 
@@ -919,7 +911,7 @@
 
 .feed__products .slick-prev,
 .feed__products .slick-next {
-	top: -110px;
+	top: -109px;
 }
 
 //end followers feed
@@ -1437,6 +1429,159 @@
 	}
 }
 
-
-
 //end join
+
+//start footer
+
+.footer {
+	&__inner {
+		min-height: 525px;
+		background-color: #262b30;
+		padding-top: 130px;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+	}
+
+	&__item {
+		color: #ababab;
+
+		a {
+			color: #ababab;
+		}
+
+		ul>li {
+			margin-left: 0;
+		}
+
+		&.adress {
+			max-width: 280px;
+			padding-left: 15px;
+		}
+
+		&.menu {
+			max-width: 180px;
+		}
+
+		&.form {
+			max-width: 360px;
+		}
+	}
+
+	&__item-logo {}
+
+	&__item-text {
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 28px;
+		margin: 27px 0 20px;
+	}
+
+	&__item-contacts {
+		font-size: 15px;
+		line-height: 26px;
+		font-weight: 400;
+
+		li {
+			padding-left: 30px;
+
+			&+li {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	&__item-phone {
+		background: url(../images/icons/phone.svg) left center no-repeat;
+		background-size: 17px;
+	}
+
+	&__item-mail {
+		background: url(../images/icons/envelope.svg) left center no-repeat;
+		background-size: 17px;
+	}
+
+	&__item-adress {
+		background: url(../images/icons/marker.svg) left center no-repeat;
+		background-size: 17px;
+	}
+
+	&__item-title {
+		display: flex;
+		align-items: center;
+		min-height: 42px;
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 1.5px;
+		color: #fff;
+		margin-bottom: 24px;
+	}
+
+	&__item-menu {
+		font-size: 15px;
+		line-height: 32px;
+		font-weight: 400;
+	}
+
+	&__form {
+
+
+		form {
+			position: relative;
+		}
+
+		input {
+			display: block;
+			height: 50px;
+			width: 100%;
+			border-radius: 28px;
+			outline: none;
+			border: none;
+			padding-left: 30px;
+			padding-right: 120px;
+		}
+
+		button {
+			padding: 18px 30px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 15px;
+		}
+	}
+
+	&__form-text {
+		font-size: 15px;
+		line-height: 28px;
+		font-weight: 400;
+		margin-bottom: 30px;
+	}
+
+	&__item-social {}
+
+	&__copy {
+		background-color: #192027;
+		min-height: 94px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&-text {
+			font-size: 15px;
+			line-height: 27px;
+			color: #999999;
+			font-weight: 400;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+//end footer
