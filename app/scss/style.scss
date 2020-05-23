@@ -391,6 +391,7 @@
 
 
 // Featured products slider
+
 .featured {
 	background-color: #eff1f5;
 	padding-top: 120px;
@@ -411,7 +412,8 @@
 	position: relative;
 }
 
-.slick-arrow {
+.feed__products.slick-slider .slick-arrow,
+.featured__products.slick-slider .slick-arrow {
 	position: absolute;
 	background-color: #7347c1;
 	padding-top: 15px;
@@ -421,7 +423,6 @@
 }
 
 .product-cart {
-
 	&__image {
 		flex: 0 1 50%;
 		min-height: 450px;
@@ -704,7 +705,6 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-
 	}
 
 	&-image--buttons {
@@ -921,16 +921,6 @@
 .feed__products .slick-prev,
 .feed__products .slick-next {
 	top: -110px;
-}
-
-.feed__products .slick-list div {
-	// width: 360px;
-}
-
-.feed__products .slick-list div+div {
-
-	// margin-right: calc((100vw - 370px - 1080px) / 2);
-	// margin-right: 80px;
 }
 
 //end followers feed
@@ -1170,23 +1160,67 @@
 //start feedback
 
 .feedback {
-	margin: 120px 0;
+	padding: 120px 0;
 	text-align: center;
 }
 
-.feedback__inner {
-	display: flex;
-	justify-content: space-between;
+.feedback___slider {
+	position: relative;
+}
+
+.feedback__slider.slick-slider .slick-arrow {
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.15);
+	border: none;
+	cursor: pointer;
+	outline: none;
+	z-index: 1;
+}
+
+.feed-slick-prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -25px;
+
+	&::before {
+		content: '\f104';
+		font-family: 'icomoon';
+		font-size: 30px;
+		position: absolute;
+		top: 7px;
+		left: 17px;
+		color: #7347c1;
+	}
+}
+
+.feed-slick-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -25px;
+
+	&::before {
+		content: '\f105';
+		font-family: 'icomoon';
+		font-size: 30px;
+		position: absolute;
+		top: 7px;
+		right: 17px;
+		color: #0674ec;
+	}
 }
 
 .feedback__item {
-	max-width: 555px;
+	width: 555px;
 	width: 100%;
 	padding: 50px 40px 30px;
 	border-radius: 4px;
 	box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
 	border-left: 2px solid $btn;
-	margin-bottom: 60px;
 	position: relative;
 
 	&::before {
@@ -1197,7 +1231,6 @@
 		top: 57px;
 		right: 43px;
 		color: #e8e8e8;
-
 	}
 
 	&-client {
@@ -1237,11 +1270,155 @@
 		font-weight: 400;
 		margin: 27px 0 23px;
 	}
-
 }
 
 .feedback__link {
-	margin: 0 auto;
+	margin: 60px auto 0;
 }
 
 //end feedback
+
+//start news
+.news {
+	background-color: #eff1f5;
+	padding: 120px 0;
+}
+
+.news {
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+
+		max-width: 360px;
+		width: 100%;
+		border-radius: 4px;
+		box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+		overflow: hidden;
+
+		&-img {
+			min-height: 230px;
+			width: 100%;
+
+			&.img1 {
+				background-color: #7385cd;
+			}
+
+			&.img2 {
+				background-color: #90bbc4;
+			}
+
+			&.img3 {
+				background-color: #ac7fb8;
+			}
+		}
+
+		&-info {
+			padding: 0 30px;
+		}
+
+		&-title {
+			font-size: 22px;
+			padding: 30px 0 23px;
+		}
+
+		&-text {
+			font-size: 16px;
+			line-height: 30px;
+			font-weight: 400;
+			margin-bottom: 23px;
+
+		}
+	}
+
+	&__item-bottom {
+
+		display: flex;
+		justify-content: space-between;
+		font-size: 15px;
+		line-height: 30px;
+		font-weight: 400;
+		padding: 9px 0;
+		border-top: 1px solid #ececec;
+
+		.item-bottom__date {
+			flex: 0 1 50%;
+			color: #999999;
+			padding-left: 24px;
+			background: url(../images/icons/clock.svg) left no-repeat;
+			background-size: 15px;
+			border-right: 1px solid #ececec;
+		}
+
+		.item-bottom__comment {
+			color: #7e7e7e;
+			padding-left: 23px;
+			background: url(../images/icons/bubble.svg) left no-repeat;
+			background-size: 15px;
+		}
+
+		.item-bottom__views {
+			color: #7e7e7e;
+			padding-left: 23px;
+			background: url(../images/icons/eye.svg) left no-repeat;
+			background-size: 15px;
+		}
+
+	}
+}
+
+//end news
+
+//start guarantee
+
+.guarantee {
+
+	&__inner {
+		min-height: 298px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		max-width: 615px;
+		width: 100%;
+		text-align: center;
+
+		&-img {
+			min-height: 120px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			margin: 0 auto;
+
+		}
+
+		&-title {
+			font-size: 24px;
+			font-weight: 400;
+			margin-top: 30px;
+
+			span {
+				color: #0674ec;
+			}
+		}
+	}
+
+
+
+
+}
+
+
+//end guarantee
+
+
+//Start join
+
+
+
+//end join

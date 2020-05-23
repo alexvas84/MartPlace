@@ -21,6 +21,12 @@ $(function () {
 	});
 
 
+	$('.feedback__slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		prevArrow: '<button type = "button" class= "feed-slick-prev"></button>',
+		nextArrow: '<button type = "button" class= "feed-slick-next"></button>'
+	});
 
 	var mixer = mixitup('.newitem__inner-box');
 
@@ -37,6 +43,7 @@ $(function () {
 		console.log("Out!");
 		filter_menu.classList.toggle('_active');
 	});
+
 
 
 });
