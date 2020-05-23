@@ -443,8 +443,7 @@
 
 		.product-cart__buttons {
 			position: absolute;
-			background: linear-gradient(to right, rgba(111, 73, 183, 1) 0%, rgba(13, 113, 222, 1) 100%);
-			// top: -100%;
+			background: $gradient;
 			width: 100%;
 			height: 0;
 			bottom: 0;
@@ -719,7 +718,7 @@
 		transition: all .3s ease;
 		font-size: 15px;
 		font-weight: 500;
-		background: linear-gradient(to right, rgba(111, 73, 183, 1) 0%, rgba(13, 113, 222, 1) 100%);
+		background: $gradient;
 
 		.buttons-info {
 			background: transparent;
@@ -1407,10 +1406,6 @@
 			}
 		}
 	}
-
-
-
-
 }
 
 
@@ -1418,6 +1413,29 @@
 
 
 //Start join
+
+.join {
+	background: $gradient;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 400px;
+	padding: 10px 10px;
+
+	&__text {
+		font-size: 18px;
+		font-weight: 400;
+		margin: 23px auto 48px;
+	}
+
+	&__btn {
+		background-color: #fff;
+		color: $btn;
+		font-size: 16px;
+	}
+}
 
 
 
