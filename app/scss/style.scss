@@ -1607,7 +1607,7 @@
 		}
 
 		button {
-			padding: 18px 30px;
+			padding: 19px 30px;
 			position: absolute;
 			right: 0;
 			top: 0;
@@ -1621,8 +1621,6 @@
 		font-weight: 400;
 		margin-bottom: 30px;
 	}
-
-	&__item-social {}
 
 	&__copy {
 		background-color: #192027;
@@ -1662,10 +1660,7 @@
 		font-size: 15px;
 	}
 
-	&__item-link-world {}
 }
-
-
 
 .icon-facebook {
 	&::before {
@@ -1722,8 +1717,8 @@
 		width: 15px;
 		height: 15px;
 		position: absolute;
-		left: 14px;
-		top: 14px;
+		left: 13px;
+		top: 13px;
 	}
 
 	background-color: #ea4c89;
