@@ -63,7 +63,6 @@
 
 	&__price {
 		font-size: 15px;
-		font-weight: 400;
 		color: $btn;
 	}
 }
@@ -116,7 +115,6 @@
 			padding-left: 22px;
 			padding-right: 80px;
 			font-size: 15px;
-			font-weight: 400;
 			border-radius: 23px;
 			border: 1px solid #d9dfe5;
 			outline: none;
@@ -198,7 +196,6 @@
 		margin-bottom: 30px;
 
 		span {
-			font-weight: 400;
 			display: block;
 		}
 	}
@@ -217,7 +214,6 @@
 		cursor: pointer;
 		margin-left: 26px;
 		font-size: 16px;
-		font-weight: 400;
 		transition: all .3s;
 
 		&:hover {
@@ -277,7 +273,6 @@
 
 			&::placeholder {
 				font-size: 16px;
-				font-weight: 400;
 				color: #676767;
 			}
 		}
@@ -293,7 +288,6 @@
 			outline: none;
 			appearance: none;
 			font-size: 16px;
-			font-weight: 400;
 			color: #555;
 			border-top-right-radius: 3px;
 			border-bottom-right-radius: 3px;
@@ -303,7 +297,6 @@
 			border-radius: 3px;
 			border: none;
 			font-size: 16px;
-			font-weight: 400;
 			line-height: 55px;
 			padding: 0 60px;
 			margin-left: 26px;
@@ -364,7 +357,6 @@
 
 		&-title {
 			font-size: 24px;
-			font-weight: 400;
 			margin-top: 34px;
 			margin-bottom: 20px;
 			color: #010101;
@@ -373,7 +365,6 @@
 		&-text {
 			font-size: 16px;
 			line-height: 30px;
-			font-weight: 400;
 		}
 	}
 }
@@ -504,7 +495,6 @@
 		.info__product-name {
 			margin-left: 8px;
 			font-size: 15px;
-			font-weight: 400;
 			line-height: 30px;
 			color: #000;
 		}
@@ -517,7 +507,6 @@
 
 	&__text {
 		font-size: 16px;
-		font-weight: 400;
 		line-height: 30px;
 		color: #555555;
 		margin-bottom: 32px;
@@ -561,7 +550,6 @@
 	&__price-likes {
 		font-size: 15px;
 		line-height: 30px;
-		font-weight: 400;
 		color: #555;
 		padding-left: 26px;
 		position: relative;
@@ -582,7 +570,6 @@
 		font-size: 15px;
 		line-height: 30px;
 		color: $btn;
-		font-weight: 400;
 	}
 }
 
@@ -600,7 +587,6 @@
 		font-size: 16px;
 		line-height: 22px;
 		color: #747b86;
-		font-weight: 400;
 		display: flex;
 		align-items: center;
 
@@ -749,7 +735,6 @@
 				.cart-info__product-name {
 					margin-left: 5px;
 					font-size: 15px;
-					font-weight: 400;
 					line-height: 30px;
 					color: #000;
 				}
@@ -791,7 +776,6 @@
 					padding-left: 22px;
 					position: relative;
 					margin-right: 19px;
-					font-weight: 400;
 
 					&::before {
 						content: '\f08a';
@@ -808,7 +792,6 @@
 					font-size: 15px;
 					line-height: 30px;
 					color: $btn;
-					font-weight: 400;
 				}
 			}
 		}
@@ -955,7 +938,6 @@
 			font-size: 36px;
 			line-height: 36px;
 			margin-bottom: 7px;
-			font-weight: 400;
 			margin-top: 50px;
 		}
 
@@ -963,7 +945,6 @@
 			font-size: 18px;
 			line-height: 36px;
 			color: #fff;
-			font-weight: 400;
 		}
 	}
 
@@ -1044,7 +1025,6 @@
 
 		&-title {
 			font-size: 24px;
-			font-weight: 400;
 			padding: 50px 0 23px;
 		}
 
@@ -1091,7 +1071,6 @@
 
 	&-title {
 		font-size: 36px;
-		font-weight: 400;
 		margin: 0 auto 28px;
 		max-width: 615px;
 	}
@@ -1099,7 +1078,6 @@
 	&-text {
 		max-width: 615px;
 		font-size: 16px;
-		font-weight: 400;
 		line-height: 30px;
 		margin: 0 auto 42px;
 	}
@@ -1108,7 +1086,6 @@
 		min-width: 190px;
 		background-color: #fff;
 		font-size: 16px;
-		font-weight: 400;
 
 		&.sell {
 			color: $btn;
@@ -1297,13 +1274,11 @@
 
 		.item-client__name {
 			font-size: 20px;
-			font-weight: 400;
 			margin-left: 18px;
 
 			span {
 				display: block;
 				font-size: 16px;
-				font-weight: 400;
 				color: #555555;
 				margin-top: 15px;
 			}
@@ -1313,7 +1288,6 @@
 	&-comment {
 		font-size: 16px;
 		line-height: 30px;
-		font-weight: 400;
 		margin: 27px 0 23px;
 	}
 }
@@ -1379,7 +1353,6 @@
 		&-text {
 			font-size: 16px;
 			line-height: 30px;
-			font-weight: 400;
 			margin-bottom: 23px;
 		}
 
@@ -1389,7 +1362,6 @@
 			justify-content: space-between;
 			font-size: 15px;
 			line-height: 30px;
-			font-weight: 400;
 			padding: 9px 0;
 			border-top: 1px solid #ececec;
 
@@ -1449,7 +1421,6 @@
 
 		&-title {
 			font-size: 24px;
-			font-weight: 400;
 			margin-top: 30px;
 
 			span {
@@ -1477,7 +1448,6 @@
 
 	&__text {
 		font-size: 18px;
-		font-weight: 400;
 		margin: 23px auto 48px;
 	}
 
@@ -1533,7 +1503,6 @@
 
 	&__item-text {
 		font-size: 15px;
-		font-weight: 400;
 		line-height: 28px;
 		margin: 27px 0 20px;
 	}
@@ -1541,7 +1510,6 @@
 	&__item-contacts {
 		font-size: 15px;
 		line-height: 26px;
-		font-weight: 400;
 
 		li {
 			padding-left: 30px;
@@ -1572,7 +1540,6 @@
 		align-items: center;
 		min-height: 42px;
 		font-size: 18px;
-		font-weight: 400;
 		letter-spacing: 1.5px;
 		color: #fff;
 		margin-bottom: 24px;
@@ -1581,7 +1548,6 @@
 	&__item-menu {
 		font-size: 15px;
 		line-height: 32px;
-		font-weight: 400;
 	}
 
 	&__form {
@@ -1601,7 +1567,6 @@
 
 			&::placeholder {
 				font-size: 15px;
-				font-weight: 400;
 				color: #ababab;
 			}
 		}
@@ -1618,7 +1583,6 @@
 	&__form-text {
 		font-size: 15px;
 		line-height: 28px;
-		font-weight: 400;
 		margin-bottom: 30px;
 	}
 
@@ -1633,7 +1597,6 @@
 			font-size: 15px;
 			line-height: 27px;
 			color: #999999;
-			font-weight: 400;
 
 			a {
 				color: #fff;
@@ -1725,3 +1688,64 @@
 }
 
 //end footer
+
+//new-items
+
+// start search
+
+.page-search {
+	min-height: 280px;
+	background: $gradient;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px 0;
+
+	p {
+		font-size: 26px;
+		line-height: 70px;
+		color: #f3f3f8;
+	}
+
+	&__form {
+		form {
+			max-width: 555px;
+			width: 100%;
+			position: relative;
+			margin: 10px auto 37px;
+		}
+
+		input {
+			width: 100%;
+			display: inline-block;
+			height: 55px;
+			border-radius: 28px;
+			outline: none;
+			border: none;
+			padding-left: 30px;
+			padding-right: 120px;
+
+			&::placeholder {
+				font-size: 15px;
+
+				color: #ababab;
+			}
+		}
+
+		button {
+			padding: 21px 30px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 15px;
+		}
+	}
+}
+
+
+
+
+
+// end search

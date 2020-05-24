@@ -23,7 +23,7 @@ li {
 
 body {
 	font-family: 'Quicksand', sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 	height: 100%;
 }
 
@@ -53,6 +53,7 @@ p {
 
 .container {
 	max-width: 1170px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -190,4 +191,41 @@ p {
 	padding-left: 24px;
 	background: url(../images/icons/cart-blue.svg) left center no-repeat;
 	background-size: 15px;
+}
+
+.breadcrumbs {
+
+	&__list {
+		li {
+			display: inline-block;
+			position: relative;
+
+			&+li {
+				padding-left: 25px;
+
+				&::before {
+					position: absolute;
+					content: '/';
+					color: #fff;
+					left: 8px;
+				}
+			}
+
+			a {
+
+				color: #fff;
+				font-size: 15px;
+			}
+
+			&:last-child {
+
+				a,
+				span {
+					color: #bfcad7;
+				}
+			}
+		}
+
+
+	}
 }
