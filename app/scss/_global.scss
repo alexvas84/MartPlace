@@ -23,7 +23,16 @@ li {
 body {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 500;
+}
 
+h1,
+h2 {
+	margin: 0;
+	font-size: inherit;
+}
+
+p {
+	margin: 0;
 }
 
 .container {
@@ -74,25 +83,6 @@ body {
 	border: none;
 	cursor: pointer;
 	outline: none;
-}
-
-.product-wp::before {
-	content: '\f19a';
-	font-family: 'icomoon';
-	color: #7347c1;
-	font-size: 15px;
-	position: absolute;
-	left: 0;
-
-}
-
-.product-psd::before {
-	content: '\f1c4';
-	font-family: 'icomoon';
-	color: #7347c1;
-	font-size: 15px;
-	position: absolute;
-	left: 0;
 }
 
 .box {
@@ -163,4 +153,25 @@ body {
 	margin: 0 auto 50px;
 	max-width: 705px;
 	text-align: center;
+}
+
+.product-wp {
+	padding-left: 25px;
+	background: url(../images/icons/wp.svg) left center no-repeat;
+}
+
+.product-psd {
+	padding-left: 25px;
+	background: url(../images/icons/psd.svg) left center no-repeat;
+}
+
+.product-html {
+	padding-left: 25px;
+	background: url(../images/icons/html.svg) left center no-repeat;
+}
+
+.product-sell {
+	padding-left: 24px;
+	background: url(../images/icons/cart-blue.svg) left center no-repeat;
+	background-size: 15px;
 }
