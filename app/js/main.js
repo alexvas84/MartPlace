@@ -20,13 +20,26 @@ $(function () {
 		slidesToScroll: 3
 	});
 
-
-	$('.feedback__slider').slick({
-		slidesToShow: 2,
-		slidesToScroll: 2,
-		prevArrow: '<button type = "button" class= "feed-slick-prev"></button>',
-		nextArrow: '<button type = "button" class= "feed-slick-next"></button>'
+	var mySwiper = new Swiper('.feedback__slider', {
+		containerModifierClass: 'feedback__slider',
+		slideClass: 'feedback__item',
+		wrapperClass: 'feedback__wrapper',
+		slidesPerView: 2,
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.feedback-button-next',
+			prevEl: '.feedback-button-prev',
+		},
 	});
+
+	/* 	$('.feedback__slider').slick({
+			slidesToShow: 2,
+			slidesToScroll: 2,
+			ariableWidth: true,
+			prevArrow: '<button type = "button" class= "feed-slick-prev"></button>',
+			nextArrow: '<button type = "button" class= "feed-slick-next"></button>'
+		}); */
 
 	var mixer = mixitup('.newitem__inner-box');
 
