@@ -35,9 +35,22 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right:before {
+	content: "\e902";
+}
 
-.icon-envelope-o:before {
-	content: "\f003";
+.icon-arrow-left:before {
+	content: "\e903";
+}
+
+.icon-List:before {
+	content: "\e900";
+	color: #867474;
+}
+
+.icon-grid:before {
+	content: "\e901";
+	color: #867474;
 }
 
 .icon-heart-o:before {
@@ -76,18 +89,14 @@
 	content: "\f105";
 }
 
+.icon-circle-o:before {
+	content: "\f10c";
+}
+
 .icon-html5:before {
 	content: "\f13b";
 }
 
 .icon-google:before {
 	content: "\f1a0";
-}
-
-.icon-drivers-license-o:before {
-	content: "\f2c3";
-}
-
-.icon-id-card-o:before {
-	content: "\f2c3";
 }

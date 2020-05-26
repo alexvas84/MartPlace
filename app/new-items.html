@@ -13,7 +13,8 @@
 
 <body>
 	<div class="wrapper">
-		<div class="content">
+		<div class="content page-content">
+
 			<header class="header">
 				<div class="header__top">
 					<div class="container">
@@ -31,7 +32,7 @@
 									style="background-image: url(images/icons/cart.svg);"><span class="num">255</span></a>
 							</div>
 							<div class="header__client">
-								<a href="" class="header__avatar" style="background-image: url();"></a>
+								<a href="" class="header__avatar" style="background-image: url(images/user.png);"></a>
 								<div class="header__bayer">
 									<a href="#" class="header__name">Taofiq Hakim</a>
 									<span class="header__price">$20.45</span>
@@ -83,101 +84,555 @@
 				</div>
 			</section>
 
-
-
-
-
-
-
-		</div>
-
-		<footer class="footer">
-			<div class="footer__inner">
+			<section class="filter">
 				<div class="container">
-					<div class="footer__info">
-						<div class="footer__item adress">
-							<a class="footer__item-logo" href="#">
-								<img src="images/footer-logo.png" alt="logo" />
-							</a>
+					<div class="filter__inner">
+						<div class="filter__link">
+							<a class="filter__link-new active" href="#">New Products</a>
+							<a class="filter__link-popular" href="#">Popular Products</a>
+						</div>
 
-							<div class="footer__item-text">
+						<select class="filter__price">
+							<option value="">Price : Low to High</option>
+						</select>
+						<select class="filter__num">
+							<option value="">12 Items Per Page</option>
+						</select>
+						<div class="filter__btn">
+							<button class="icon-grid active"></button>
+							<button class="icon-List"></button>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+
+			<section class="product-page">
+				<div class="container">
+					<div class="product-page__inner">
+						<aside class="product-page__aside">
+							<div class="category aside__item">
+								<div class="aside__title">
+									Categories
+								</div>
+								<ul class="category__list">
+									<li><a class="active" href="#">Wordpress</a><span>35</span></li>
+									<li><a href="#">Landing Page</a><span>45</span></li>
+									<li><a href="#">Psd Template</a><span>13</span></li>
+									<li><a href="#">Plugins</a><span>08</span></li>
+									<li><a href="#">HTML Template</a><span>34</span></li>
+									<li><a href="#">Components</a><span>78</span></li>
+									<li><a href="#">Joomla Template</a><span>26</span></li>
+								</ul>
+							</div>
+							<div class="filter-products aside__item">
+								<div class="aside__title">
+									Filter Products
+								</div>
+								<ul class="filter-products__list">
+									<li><a href="#">Trending Products</a></li>
+									<li><a href="#">Popular Products</a></li>
+									<li><a href="#">New Products</a></li>
+									<li><a href="#">Best Seller</a></li>
+									<li><a href="#">Best Rating</a></li>
+									<li><a href="#">Low Price</a></li>
+									<li><a href="#">High Price</a></li>
+								</ul>
+							</div>
+							<div class="price-range aside__item">
+								<div class="aside__title">
+									Pricing Range
+								</div>
+								<form>
+									<input type="text" class="js-range-slider" name="my_range" value="" />
+									<button class="btn" type="submit">Search Update</button>
+								</form>
+							</div>
+						</aside>
+						<div class="product-page__content">
+							<div class="product-page__items">
+
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18-$30</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+								<div class="product__cart category-plugins">
+									<div class="product__cart-image">
+										<a href="#" class="product__cart-image--img" style="background-image: url();">
+										</a>
+										<div class="product__cart-image--buttons">
+											<a href="#" class="buttons-info btn">More Info</a>
+											<a href="#" class="buttons-demo btn">Live Demo</a>
+										</div>
+									</div>
+									<div class="product__cart-info">
+										<a href="#" class="cart-info__title">Finance and Consulting
+											Business Theme</a>
+										<div class="cart-info__product">
+											<a href="#" class="cart-info__product-dev">
+												<span class="cart-info__product-logo"
+													style="background-image: url(images/brand.jpg);"></span>
+												<span class="cart-info__product-name">Theme-Valley</span>
+											</a>
+											<a href="#" class="cart-info__product-type product-wp">Plugin</a>
+										</div>
+										<div class="cart-info__text">
+											Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+											the mattis, leo quam aliquet congue.
+										</div>
+									</div>
+									<div class="product-page__rate">
+										<div class="cart-info__price-likes">90 loves</div>
+										<a href="#" class="cart-info__comment">90 Comments</a>
+										<div class="cart__info-rating">
+											<div class="rate-star"></div>
+											<span class="rate-num">(34)</span>
+										</div>
+
+										<div class="cart-info__price-sell product-sell">427</div>
+									</div>
+									<div class="cart-info__price product-page__bottom">
+										<div class="cart-info__price-price">$18</div>
+										<a href="#" class="cart-info__type">Wordpress</a>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="pagination">
+								<a href="" class="pagination__prev btn icon-arrow-left active"></a>
+								<ul class="pagination__list">
+									<li><a class="active btn" href="">1</a></li>
+									<li><a class="btn" href="">2</a></li>
+									<li><a class="btn" href="">...</a></li>
+									<li><a class="btn" href="">8</a></li>
+								</ul>
+								<a href="" class="pagination__next btn icon-arrow-right "></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="join">
+				<div class="container-fluid">
+					<div class="join__title maintitle">
+						Ready to Join Our Marketplace!
+					</div>
+					<div class="join__text">
+						Over 25,000 designers and developers trust the MartPlace.
+					</div>
+					<button class="join__btn btn">Join Us Today</button>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+	<footer class="footer">
+		<div class="footer__inner">
+			<div class="container">
+				<div class="footer__info">
+					<div class="footer__item adress">
+						<a class="footer__item-logo" href="#">
+							<img src="images/footer-logo.png" alt="logo" />
+						</a>
+
+						<div class="footer__item-text">
+							Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
+							mattis,
+							leo quam.
+						</div>
+						<ul class="footer__item-contacts">
+							<li class="footer__item-phone">Phone: <a href="tel:67898752235">+6789-875-2235</a></li>
+							<li class="footer__item-mail"><a href="mailto:support@aazztech.com">support@aazztech.com</a>
+							</li>
+							<li class="footer__item-adress">202 New Hampshire Avenue
+								Northwest #100, New York-2573</li>
+						</ul>
+					</div>
+					<div class="footer__item menu">
+						<div class="footer__item-title">
+							Our Company
+						</div>
+						<ul class="footer__item-menu">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">How It Work</a></li>
+							<li><a href="#">Affiliates</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Copyright Notice</a></li>
+							<li><a href="#">Blog</a></li>
+						</ul>
+					</div>
+
+					<div class="footer__item menu">
+						<div class="footer__item-title">
+							Help Support
+						</div>
+						<ul class="footer__item-menu">
+							<li><a href="#">Support Forum</a></li>
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="#">Support Policy</a></li>
+							<li><a href="#">Refund Policy</a></li>
+							<li><a href="#">FAQs</a></li>
+							<li><a href="#">Buyers Faq</a></li>
+							<li><a href="#">Sellers Faq</a></li>
+						</ul>
+					</div>
+					<div class="footer__item form">
+						<div class="footer__item-title">
+							Newsletter
+						</div>
+						<div class="footer__form">
+							<div class="footer__form-text">
 								Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
 								mattis,
 								leo quam.
 							</div>
-							<ul class="footer__item-contacts">
-								<li class="footer__item-phone">Phone: <a href="tel:67898752235">+6789-875-2235</a></li>
-								<li class="footer__item-mail"><a href="mailto:support@aazztech.com">support@aazztech.com</a>
-								</li>
-								<li class="footer__item-adress">202 New Hampshire Avenue
-									Northwest #100, New York-2573</li>
-							</ul>
+							<form>
+								<input type="text" placeholder="Enter email" required>
+								<button class="btn" type="submit">Submit</button>
+							</form>
 						</div>
-						<div class="footer__item menu">
-							<div class="footer__item-title">
-								Our Company
-							</div>
-							<ul class="footer__item-menu">
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">How It Work</a></li>
-								<li><a href="#">Affiliates</a></li>
-								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Copyright Notice</a></li>
-								<li><a href="#">Blog</a></li>
-							</ul>
-						</div>
-
-						<div class="footer__item menu">
-							<div class="footer__item-title">
-								Help Support
-							</div>
-							<ul class="footer__item-menu">
-								<li><a href="#">Support Forum</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Support Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">FAQs</a></li>
-								<li><a href="#">Buyers Faq</a></li>
-								<li><a href="#">Sellers Faq</a></li>
-							</ul>
-						</div>
-						<div class="footer__item form">
-							<div class="footer__item-title">
-								Newsletter
-							</div>
-							<div class="footer__form">
-								<div class="footer__form-text">
-									Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
-									mattis,
-									leo quam.
-								</div>
-								<form>
-									<input type="text" placeholder="Enter email" required>
-									<button class="btn" type="submit">Submit</button>
-								</form>
-							</div>
-							<ul class="footer__item-social">
-								<li><a class="footer__item-link icon-facebook" href="#"></a></li>
-								<li><a class="footer__item-link icon-twitter" href="#"></a></li>
-								<li><a class="footer__item-link icon-google" href="#"></a></li>
-								<li><a class="footer__item-link icon-pinterest" href="#"></a></li>
-								<li><a class="footer__item-link icon-linkedin" href="#"></a></li>
-								<li><a class="footer__item-link icon-world" href="#"></a></li>
-							</ul>
-						</div>
+						<ul class="footer__item-social">
+							<li><a class="footer__item-link icon-facebook" href="#"></a></li>
+							<li><a class="footer__item-link icon-twitter" href="#"></a></li>
+							<li><a class="footer__item-link icon-google" href="#"></a></li>
+							<li><a class="footer__item-link icon-pinterest" href="#"></a></li>
+							<li><a class="footer__item-link icon-linkedin" href="#"></a></li>
+							<li><a class="footer__item-link icon-world" href="#"></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="footer__copy">
-				<div class="container-fluid">
-					<div class="footer__copy-text">
-						©2017 <a href="#">MartPlace</a>. All rights reserved. Created by <a href="#">AazzTech</a>
-					</div>
+		<div class="footer__copy">
+			<div class="container-fluid">
+				<div class="footer__copy-text">
+					©2017 <a href="#">MartPlace</a>. All rights reserved. Created by <a href="#">AazzTech</a>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
