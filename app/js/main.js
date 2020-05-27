@@ -35,7 +35,7 @@ $(function () {
 	try {
 		var mixer = mixitup('.newitem__inner-box');
 	}
-	catch (error) {
+	catch {
 		console.log('Ошибка КАРЛ!!!!! Все СЛОМАЛ');
 	};
 
