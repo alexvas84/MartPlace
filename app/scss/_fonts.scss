@@ -742,6 +742,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-share:before {
+	content: "\e905";
+}
+
 .icon-reply:before {
 	content: "\e904";
 	color: #555;
