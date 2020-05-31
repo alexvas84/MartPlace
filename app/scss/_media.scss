@@ -29,17 +29,23 @@
 		overflow: hidden;
 	}
 
-	body.touch .arrow {
+	/* body.touch .arrow */
+	.arrow {
 		display: block;
 	}
 
-	body.touch .submenu.open {
+
+	/* body.touch .submenu.open */
+	.submenu.open {
 		display: block;
 		visibility: visible;
 		opacity: 1;
 	}
 
-	body.touch .submenu {
+	//меню в бургере
+
+	/* body.touch .submenu */
+	.submenu-burger {
 		background-color: transparent;
 		box-shadow: none;
 		padding: 10px;
@@ -77,23 +83,23 @@
 
 			.submenu__col {
 				position: relative;
-				max-width: 100%;
-				padding-top: 5px;
-				padding-bottom: 5px;
+				min-width: 100%;
+				;
 			}
 
 			.submenu__inner {
 				position: relative;
-				top: 0;
+				top: 10px;
 				left: 0;
 				display: none;
 				padding-left: 10px;
+				margin-bottom: 30px;
+				column-count: 2;
 
 				&.open {
 					display: block;
 				}
 			}
-
 		}
 	}
 
@@ -109,6 +115,7 @@
 		cursor: pointer;
 		top: 34px;
 		left: 14px;
+		transition: transform .5s ease;
 
 		&.active {
 			top: -44px;
@@ -116,6 +123,7 @@
 			position: relative;
 			margin-bottom: 50px;
 			align-self: flex-end;
+			transition: transform .5s ease;
 		}
 
 		&::before,
@@ -126,7 +134,7 @@
 			width: 100%;
 			height: 2px;
 			left: 0;
-			transition: transform .5s ease;
+
 		}
 
 		&::before {
@@ -153,13 +161,17 @@
 		}
 
 		&.active:after {
-			bottom: 9px;
+			top: 9px;
 			transform: rotate(-405deg);
 		}
 
 		&.active span {
 			transform: scale(0);
 		}
+	}
+
+	.menu.hover .menu__list a:hover {
+		color: $btn;
 	}
 
 	.header__bottom {
@@ -169,13 +181,17 @@
 			padding: 100px 50px;
 			top: 0;
 			z-index: 1;
-			left: 0;
+			left: -100%;
 			background-color: rgba(0, 0, 0, .9);
 			height: 100%;
 			transition: all .4s;
 			display: flex;
 			flex-direction: column;
 			width: 70%;
+
+			&.active {
+				left: 0;
+			}
 
 			.menu__list {
 				display: block;
@@ -195,10 +211,6 @@
 				margin-top: 30px;
 			}
 
-			&.active {
-				left: 0;
-			}
-
 			.submenu {
 				position: relative;
 				top: 0;
@@ -206,14 +218,40 @@
 			}
 		}
 
-		/* .burger__menu-overlay.active {
-			display: block;
-		} */
+
+	}
+
+	.header__btn-menu {
+		display: block;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: #fff;
+		cursor: pointer;
+
+		&::before {
+			font-family: 'Linearicons';
+			color: $btn;
+			position: absolute;
+			font-size: 50px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.header__box {
+		transition: all .3s;
+
+		&.active {
+			transform: translateX(150%);
+		}
 	}
 }
 
 @media (max-width:770px) {
-
 
 	.footer__inner {
 		padding-top: 30px;
