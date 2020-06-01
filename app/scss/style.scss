@@ -3526,39 +3526,52 @@ body.mouse .menu .menu__list:hover {
 //start login
 
 
-.login__inner {
+.login__inner,
+.register__inner {
 	padding-top: 70px;
 	padding-bottom: 120px;
 }
 
-.login__box {
+.login__box,
+.register__box {
 	margin: 0 auto;
 	background-color: #fff;
 	max-width: 555px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+
 }
 
-.login__top {
+
+.login__top,
+.register__top {
 	text-align: center;
 	border-bottom: 1px solid #e8ebf0;
 	padding: 57px 10px 25px;
 }
 
-.login__title {
+.login__title,
+.register__title {
 	font-size: 26px;
 	line-height: 28px;
 	margin-bottom: 20px;
 }
 
-.login__text {
+.login__text,
+.register__text {
+	margin: 0 auto;
 	font-size: 16px;
 	line-height: 28px;
+	max-width: 440px;
 }
 
-.login__form {
+.login__form,
+.register__form {
 	padding: 23px 50px 60px;
 }
 
-.login__line {
+.login__line,
+.register__line {
 	margin-bottom: 25px;
 	position: relative;
 
@@ -3589,7 +3602,6 @@ body.mouse .menu .menu__list:hover {
 .login__check {
 	margin-bottom: 30px;
 }
-
 
 .login-check {
 	position: absolute;
@@ -3632,7 +3644,8 @@ body.mouse .menu .menu__list:hover {
 	opacity: 1;
 }
 
-.login__btn {
+.login__btn,
+.register__btn {
 	font-size: 15px;
 	font-weight: 500;
 	width: 190px;
@@ -3651,7 +3664,14 @@ body.mouse .menu .menu__list:hover {
 	}
 }
 
-.login__bottom-text {}
+.register__bottom-text {
+	font-size: 16px;
+	color: #898f96;
+
+	a {
+		color: $btn;
+	}
+}
 
 //end login
 

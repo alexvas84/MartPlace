@@ -356,47 +356,56 @@
 						<ul class="breadcrumbs__list">
 							<li><a href="#">Home</a></li>
 							<li>
-								<span>Login</span>
+								<span>Register</span>
 							</li>
 						</ul>
 					</div>
-					<h1 class="page-title__title">Login</h1>
+					<h1 class="page-title__title">Register</h1>
 				</div>
 			</section>
 
-			<section class="login page-content">
+			<section class="register page-content">
 				<div class="container">
-					<div class="login__inner">
-						<div class="login__box">
-							<div class="login__top">
-								<div class="login__title">Welcome Back</div>
-								<div class="login__text">You can sign in with your username</div>
+					<div class="register__inner">
+						<div class="register__box">
+							<div class="register__top">
+								<div class="register__title">Create Your Account</div>
+								<div class="register__text">Please fill the following fields with appropriate information
+									to register a new MartPlace account.</div>
 							</div>
-							<div class="login__form">
+							<div class="register__form">
 								<form>
-									<div class="login__line">
+									<div class="register__line">
+										<label>Your Name</label>
+										<input type="text" placeholder="Your Name" required>
+									</div>
+									<div class="register__line">
+										<label>Email Address</label>
+										<input type="text" placeholder="Enter your username..." required>
+									</div>
+									<div class="register__line">
 										<label>Username</label>
 										<input type="text" placeholder="Enter your username..." required>
 									</div>
-									<div class="login__line">
+									<div class="register__line">
 										<label>Password</label>
 										<input type="text" placeholder="Enter your password..." required>
 									</div>
-									<div class="login__check">
-										<input type="checkbox" class="login-check" id="checkbox" />
-										<label class="check__label" for="checkbox">Remember me</label>
+									<div class="register__line">
+										<label>Confirm Password</label>
+										<input type="text" placeholder="Enter your password..." required>
 									</div>
-									<button type="submit" class="login__btn btn">Login Now</button>
+
+									<button type="submit" class="register__btn btn">Register Now</button>
 								</form>
-								<div class="login__bottom">
-									<div class="login__bottom-text">Lost your <a href="#">username</a> or <a
-											href="#">password?</a>
-									</div>
-									<div class="login__bottom-text">Don't have an <a href="#">account?</a></div>
+
+								<div class="register__bottom-text">Already have an account?<a href="#">Login</a>
 								</div>
+
 							</div>
 						</div>
 					</div>
+				</div>
 			</section>
 
 
