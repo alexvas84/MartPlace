@@ -2785,7 +2785,8 @@ body.mouse .menu .menu__list:hover {
 	margin-bottom: 23px;
 }
 
-.check-license {
+.check-license,
+	{
 	appearance: none;
 	position: absolute;
 }
@@ -3520,5 +3521,139 @@ body.mouse .menu .menu__list:hover {
 }
 
 // end favourites
+
+
+//start login
+
+
+.login__inner {
+	padding-top: 70px;
+	padding-bottom: 120px;
+}
+
+.login__box {
+	margin: 0 auto;
+	background-color: #fff;
+	max-width: 555px;
+}
+
+.login__top {
+	text-align: center;
+	border-bottom: 1px solid #e8ebf0;
+	padding: 57px 10px 25px;
+}
+
+.login__title {
+	font-size: 26px;
+	line-height: 28px;
+	margin-bottom: 20px;
+}
+
+.login__text {
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.login__form {
+	padding: 23px 50px 60px;
+}
+
+.login__line {
+	margin-bottom: 25px;
+	position: relative;
+
+	label {
+		display: block;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 26px;
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		border: none;
+		height: 50px;
+		background-color: #f4f5f8;
+		padding: 0 20px;
+		outline: none;
+
+		&::placeholder {
+			font-size: 16px;
+			line-height: 30px;
+			color: #898f96;
+		}
+	}
+}
+
+.login__check {
+	margin-bottom: 30px;
+}
+
+
+.login-check {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.check__label {
+	position: relative;
+	padding: 0 0 0 35px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.check__label::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	transition: all .1s linear;
+	border: 4px solid #e6e9ed;
+	left: 0;
+	top: 0;
+}
+
+.check__label::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(../images/icons/check.svg) center no-repeat;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: all .1s linear;
+}
+
+.login-check:checked+.check__label:after {
+	opacity: 1;
+}
+
+.login__btn {
+	font-size: 15px;
+	font-weight: 500;
+	width: 190px;
+	margin-bottom: 40px;
+	padding: 17px 10px;
+}
+
+.login__bottom {
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	color: #898f96;
+
+	a {
+		color: $btn;
+	}
+}
+
+.login__bottom-text {}
+
+//end login
+
 
 @import 'media';
