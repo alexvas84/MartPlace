@@ -16,7 +16,7 @@ $(function () {
 		prevArrow: '<button type = "button" class= "slick-prev"></button>',
 		nextArrow: '<button type = "button" class= "slick-next"></button>',
 		slidesToShow: 3,
-		slidesToScroll: 3
+		slidesToScroll: 1
 	});
 
 	var mySwiper = new Swiper('.feedback__slider', {
@@ -53,22 +53,27 @@ $(function () {
 		});
 	} catch{ };
 
-	// new-item sort
+	// PRODUCT CART GRID/LIST view
+
 
 	let btn_grid = document.querySelector('.icon-grid');
 	let btn_list = document.querySelector('.icon-List');
 	let product = document.querySelectorAll('.product__cart');
 
+	const if_fafourite = document.querySelector('.favourites');
 	const rate_block = document.querySelectorAll('.product-page__rate');
 	const info_block = document.querySelectorAll('.product__cart-info');
-	const bottom_block = document.querySelectorAll('.product-page__bottom');
-	const product_type = document.querySelectorAll('.cart-info__type');
+	const theme_block = document.querySelectorAll('.cart-info__product');
+	const bottom_block = document.querySelectorAll('.cart-info__price');
+	const product_type = document.querySelectorAll('.cart-info__product-type');
 	const product_sell = document.querySelectorAll('.product-sell');
 	const theme_name = document.querySelectorAll('.cart-info__product-dev');
-	try {
-		btn_grid.addEventListener('click', function (event) {
-			if (btn_list.classList.contains('active')) {
+	const raiting = document.querySelectorAll('.cart__info-rating');
+	const likes = document.querySelectorAll('.cart-info__price-likes');
 
+	try {
+		btn_grid.addEventListener('click', (e) => {
+			if (btn_list.classList.contains('active')) {
 				btn_grid.classList.add('active');
 				btn_list.classList.remove('active');
 				for (let i = 0; i < product.length; i++) {
@@ -77,8 +82,23 @@ $(function () {
 
 				for (let i = 0; i < rate_block.length; i++) {
 					rate_block[i].insertBefore(product_sell[i], rate_block[i].children['last']);
-					info_block[i].insertBefore(theme_name[i], info_block[i].children[1]);
-					bottom_block[i].insertBefore(product_type[i], bottom_block[i].children[1]);
+
+					if (if_fafourite != null) {
+						theme_block[i].insertBefore(theme_name[i], info_block[i].children['first']);
+						theme_block[i].insertBefore(product_type[i], info_block[i].children['last']);
+						bottom_block[i].insertBefore(raiting[i], bottom_block[i].children[1]);
+						bottom_block[i].insertBefore(product_sell[i], bottom_block[i].children['last']);
+					} else {
+						bottom_block[i].insertBefore(product_type[i], info_block[i].children['last']);
+						theme_block[i].insertBefore(theme_name[i], info_block[i].children['last']);
+						rate_block[i].insertBefore(raiting[i], rate_block[i].children['first']);
+						rate_block[i].insertBefore(product_sell[i], rate_block[i].children['last']);
+					};
+
+					// theme_block[i].insertBefore(product_type[i], info_block[i].children['last']);
+
+					bottom_block[i].insertBefore(likes[i], bottom_block[i].children[1]);
+
 				};
 			};
 		});
@@ -87,13 +107,16 @@ $(function () {
 			if (btn_grid.classList.contains('active')) {
 				btn_grid.classList.remove('active');
 				btn_list.classList.add('active');
+
 				for (let i = 0; i < product.length; i++) {
 					product[i].classList.add('list');
 				};
 				for (let i = 0; i < rate_block.length; i++) {
 					rate_block[i].insertBefore(theme_name[i], rate_block[i].children[0]);
-					info_block[i].insertBefore(product_type[i], info_block[i].children[3]);
-					bottom_block[i].insertBefore(product_sell[i], bottom_block[i].children[2]);
+					rate_block[i].insertBefore(raiting[i], rate_block[i].children['last']);
+					rate_block[i].insertBefore(likes[i], rate_block[i].children[2]);
+					info_block[i].insertBefore(product_type[i], info_block[i].children['last']);
+					bottom_block[i].insertBefore(product_sell[i], bottom_block[i].children['last']);
 				};
 			};
 		});
@@ -101,7 +124,7 @@ $(function () {
 
 
 
-
+	//проверяем является ли устройство мобилкой
 
 
 	let isMobile = {
@@ -113,7 +136,7 @@ $(function () {
 		any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
 	};
 
-	//isMobile.any()
+	//isMobile.any() - if mobile
 
 
 	let burger_btn = document.querySelector('.header__burger');
@@ -124,7 +147,7 @@ $(function () {
 
 	try {
 		main_menu.addEventListener('click', (e) => {
-			if ((e.target.tagName == 'A' || e.target == burger_btn) && body.classList.contains('touch')) {
+			if ((e.target.tagName == 'A' || e.target.closest('.header__burger')) && body.classList.contains('touch')) {
 				toggleMenu();
 			};
 		}, false);
@@ -140,15 +163,27 @@ $(function () {
 
 			if (burger_btn.classList.contains('active')) {
 				body.classList.add('lock');
-				// main_menu.insertBefore(burger_btn, main_menu.children[0]);
 			} else {
 				body.classList.remove('lock');
-				// header_menu.insertBefore(burger_btn, header_menu.children[0]);
 			};
 		};
 	} catch{ };
 
+	// клик на стрелочку в бургер-меню
 
+	let arrow = document.querySelectorAll('.arrow');
+	for (i = 0; i < arrow.length; i++) {
+		// let thisLink = arrow[i].previousElementSibling;
+		let submenu = arrow[i].nextElementSibling;
+		let thisArrow = arrow[i];
+		// thisLink.classList.add('parent');
+		arrow[i].addEventListener('click', (e) => {
+			submenu.classList.toggle('open');
+			thisArrow.classList.toggle('active');
+		});
+	};
+
+	//режим 930px PC/Mobile
 
 	function menu_in_burger(mql) {
 		let body = document.querySelector('body');
@@ -157,38 +192,20 @@ $(function () {
 		if (mql.matches) {
 			body.classList.add('touch');
 			body.classList.remove('mouse');
-
 			if (!isMobile.any()) {
 				menu.classList.add('hover');
 			} else {
 				menu.classList.remove('hover');
 			};
-
-			let arrow = document.querySelectorAll('.arrow');
-			for (i = 0; i < arrow.length; i++) {
-				// let thisLink = arrow[i].previousElementSibling;
-				let submenu = arrow[i].nextElementSibling;
-				let thisArrow = arrow[i];
-				// thisLink.classList.add('parent');
-				arrow[i].addEventListener('click', function () {
-					submenu.classList.toggle('open');
-					thisArrow.classList.toggle('active');
-				});
-			};
-
 		} else {
 			body.classList.add('mouse');
 			body.classList.remove('touch');
 		};
 	};
 
-
-
 	let mql = window.matchMedia("(max-width:930px)");
 	mql.addListener(menu_in_burger); // Добавим прослушку на смену результата
 	menu_in_burger(mql); // Вызовем нашу функцию
-
-
 
 
 	try {
@@ -221,16 +238,20 @@ $(function () {
 
 
 	// mega menu на всю длинну
+
 	try {
-		let distance = document.querySelector('.mega__list').getBoundingClientRect();
-		let container = document.querySelector('.container').getBoundingClientRect();
-		let mega_menu = document.querySelector('.mega-menu');
-		let left = distance.left - container.left - 15;
-		mega_menu.style.left = "-" + left + "px";
+		let mega_btn = document.querySelector('.mega__list');
+
+		mega_btn.addEventListener('mouseover', (e) => {
+			let distance = document.querySelector('.mega__list').getBoundingClientRect();
+			let container = document.querySelector('.container').getBoundingClientRect();
+			let mega_menu = document.querySelector('.mega-menu');
+			let left = distance.left - container.left - 15;
+			mega_menu.style.left = "-" + left + "px";
+		}, false);
+
 	}
 	catch{ };
-
-
 
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",

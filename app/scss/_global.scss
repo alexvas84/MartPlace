@@ -326,11 +326,13 @@ p {
 	right: 0;
 	width: 0;
 	height: 0;
-	border-top: 10px solid #fff;
-	border-right: 10px solid transparent;
-	border-left: 10px solid transparent;
+	border-top: 15px solid #fff;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	cursor: pointer;
 
 	&.active {
 		transform: rotate(-180deg);
+		top: 5px;
 	}
 }

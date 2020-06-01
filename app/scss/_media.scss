@@ -34,7 +34,6 @@
 		display: block;
 	}
 
-
 	/* body.touch .submenu.open */
 	.submenu.open {
 		display: block;
@@ -142,7 +141,7 @@
 		}
 
 		&::after {
-			bottom: 0;
+			bottom: -1px;
 		}
 
 		span {
@@ -200,20 +199,26 @@
 			a {
 				display: block;
 				color: #fff;
-				font-size: 18px;
+				font-size: 25px;
 				line-height: 22px;
 				margin: 0;
 				padding: 0;
 			}
 
+			&>li {
+				border-bottom: 1px solid rgba(255, 255, 255, .2);
+				padding: 0px 10px 17px 0;
+				height: auto;
+			}
+
 			li+li {
 				margin-left: 0;
-				margin-top: 30px;
+				margin-top: 40px;
 			}
 
 			.submenu {
 				position: relative;
-				top: 0;
+				top: 20px;
 				left: 0;
 			}
 		}
