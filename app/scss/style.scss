@@ -3527,13 +3527,15 @@ body.mouse .menu .menu__list:hover {
 
 
 .login__inner,
-.register__inner {
+.register__inner,
+.recover__inner {
 	padding-top: 70px;
 	padding-bottom: 120px;
 }
 
 .login__box,
-.register__box {
+.register__box,
+.recover__box {
 	margin: 0 auto;
 	background-color: #fff;
 	max-width: 555px;
@@ -3542,36 +3544,45 @@ body.mouse .menu .menu__list:hover {
 
 }
 
-
 .login__top,
-.register__top {
+.register__top,
+.recover__top {
 	text-align: center;
 	border-bottom: 1px solid #e8ebf0;
 	padding: 57px 10px 25px;
 }
 
 .login__title,
-.register__title {
+.register__title,
+	{
 	font-size: 26px;
 	line-height: 28px;
 	margin-bottom: 20px;
 }
 
 .login__text,
-.register__text {
+.register__text,
+.recover__text {
 	margin: 0 auto;
 	font-size: 16px;
 	line-height: 28px;
-	max-width: 440px;
+	max-width: 445px;
+}
+
+.recover__text {
+	text-align: left;
+	max-width: 470px;
 }
 
 .login__form,
-.register__form {
+.register__form,
+.recover__form {
 	padding: 23px 50px 60px;
 }
 
 .login__line,
-.register__line {
+.register__line,
+.recover__line {
 	margin-bottom: 25px;
 	position: relative;
 
@@ -3645,12 +3656,17 @@ body.mouse .menu .menu__list:hover {
 }
 
 .login__btn,
-.register__btn {
+.register__btn,
+.recover__btn {
 	font-size: 15px;
 	font-weight: 500;
 	width: 190px;
 	margin-bottom: 40px;
 	padding: 17px 10px;
+}
+
+.recover__btn {
+	margin-bottom: 0;
 }
 
 .login__bottom {
