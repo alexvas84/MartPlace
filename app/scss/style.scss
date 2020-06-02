@@ -2538,16 +2538,18 @@ body.mouse .menu .menu__list:hover {
 .page-title {
 	min-height: 180px;
 	background: $gradient;
-	padding-top: 56px;
-	padding-bottom: 30px;
+	display: flex;
+	align-items: center;
+	min-height: 280px;
+	padding: 30px 0;
 }
 
 .page-title__title {
 	font-size: 30px;
-	line-height: 30px;
+	line-height: 50px;
 	font-weight: 500;
 	color: #fff;
-	margin-top: 25px;
+	// margin-top: 25px;
 }
 
 //end products page
@@ -3691,5 +3693,70 @@ body.mouse .menu .menu__list:hover {
 
 //end login
 
+
+
+// start howitworks
+.page-title.centered {
+	text-align: center;
+	align-items: flex-end;
+
+	.page-title__title {
+		line-height: 50px;
+		margin-bottom: 60px;
+
+		span {
+			display: block;
+			font-weight: 300;
+		}
+	}
+}
+
+
+.howitworks__line {}
+
+.howitworks__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 547px;
+}
+
+.howitworks__item-images {
+	width: 458px;
+	height: 353px;
+	padding: 0 5px;
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.howitworks__item-info {
+	padding: 0 5px;
+}
+
+.item-info__title {
+	font-size: 30px;
+	margin-bottom: 38px;
+	padding-left: 10px;
+}
+
+.item-info__text {
+	font-size: 16px;
+	line-height: 30px;
+	color: #555555;
+	max-width: 470px;
+	margin-bottom: 22px;
+	align-self: end;
+}
+
+.item-info__link {
+	width: 170px;
+}
+
+.btn {}
+
+//end howitworks
 
 @import 'media';
