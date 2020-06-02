@@ -2545,7 +2545,7 @@ body.mouse .menu .menu__list:hover {
 
 .page-title__title {
 	font-size: 30px;
-	line-height: 50px;
+	margin-top: 27px;
 	font-weight: 500;
 	color: #fff;
 	// margin-top: 25px;
@@ -3761,25 +3761,12 @@ body.mouse .menu .menu__list:hover {
 
 //end howitworks
 
-.pricing {}
+//start pricingplan
 
-.page-content {}
-
-.container {}
 
 .pricing__inner {
 	padding: 120px 0;
 }
-
-.pricing__top {}
-
-.pricing__title {}
-
-.maintitle {}
-
-.pricing__text {}
-
-.maintext {}
 
 .pricing__box {
 	display: flex;
@@ -3886,11 +3873,35 @@ body.mouse .menu .menu__list:hover {
 	border-radius: 3px;
 }
 
-//start pricingplan
-
-
-
-
 //end pricingplan
+
+
+//start terms
+.terms {
+	padding: 60px 0 120px;
+}
+
+
+.term__inner {
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+	padding-bottom: 80px;
+}
+
+.terms__title {
+	font-size: 24px;
+	padding: 40px 30px 30px;
+	border-bottom: 1px solid #e8ebf0;
+}
+
+.terms__text {
+	font-size: 16px;
+	line-height: 30px;
+	color: #555555;
+	padding: 23px 35px 14px 30px;
+}
+
+//end terms
 
 @import 'media';
