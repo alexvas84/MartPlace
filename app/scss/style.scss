@@ -2540,7 +2540,6 @@ body.mouse .menu .menu__list:hover {
 	background: $gradient;
 	display: flex;
 	align-items: center;
-	min-height: 280px;
 	padding: 30px 0;
 }
 
@@ -3699,6 +3698,7 @@ body.mouse .menu .menu__list:hover {
 .page-title.centered {
 	text-align: center;
 	align-items: flex-end;
+	min-height: 280px;
 
 	.page-title__title {
 		line-height: 50px;
@@ -3718,7 +3718,9 @@ body.mouse .menu .menu__list:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 547px;
+	min-height: 547px;
+	padding: 20px 0;
+	margin: 0 -5px;
 }
 
 .howitworks__item-images {
@@ -3758,5 +3760,137 @@ body.mouse .menu .menu__list:hover {
 .btn {}
 
 //end howitworks
+
+.pricing {}
+
+.page-content {}
+
+.container {}
+
+.pricing__inner {
+	padding: 120px 0;
+}
+
+.pricing__top {}
+
+.pricing__title {}
+
+.maintitle {}
+
+.pricing__text {}
+
+.maintext {}
+
+.pricing__box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pricing__item {
+	background-color: #fff;
+	flex: 0 0 360px;
+	padding: 0 30px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+
+	&.item-starter {
+		border-top: 3px solid #ff6a6c;
+
+		.pricing__item-link {
+			background-color: #ff6a6c;
+		}
+	}
+
+	&.item-business {
+		border-top: 3px solid $btn;
+
+		.pricing__item-link {
+			background-color: $btn;
+		}
+	}
+
+	&.item-agency {
+		border-top: 3px solid #feb71d;
+
+		.pricing__item-link {
+			background-color: #feb71d;
+		}
+	}
+}
+
+.pricing__item-title {
+	font-size: 24px;
+	padding: 28px 10px;
+	text-align: center;
+	border-bottom: 1px solid #e8ebf0;
+}
+
+.pricing__item-price {
+	padding: 28px 10px;
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 22px;
+}
+
+.pricing__item-list {
+	margin-bottom: 39px;
+
+	li {
+		font-size: 16px;
+		color: #555555;
+		padding-left: 24px;
+		position: relative;
+		padding-right: 30px;
+		display: inline-block;
+
+		span,
+		a {
+			font-weight: 500;
+			color: #000;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: #c5cad4;
+			left: 0;
+			top: 5px;
+		}
+	}
+
+	li+li {
+		margin-top: 23px;
+	}
+
+	.lnr-question-circle:before {
+		font-family: 'Linearicons';
+		position: absolute;
+		right: 0;
+		color: #555555;
+		font-size: 16px;
+		cursor: pointer;
+	}
+}
+
+.pricing__item-link {
+	margin-bottom: 30px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	display: block;
+	padding: 19px 10px 17px;
+	border-radius: 3px;
+}
+
+//start pricingplan
+
+
+
+
+//end pricingplan
 
 @import 'media';
