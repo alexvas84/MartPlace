@@ -234,6 +234,21 @@
 }
 
 @media (max-width:770px) {
+	.terms__title {
+		padding: 20px 30px 20px;
+	}
+
+	.terms__text {
+		padding: 5px 15px 9px 30px;
+	}
+
+	.terms {
+		padding: 30px 0 50px;
+	}
+
+	.term__inner {
+		padding-bottom: 30px;
+	}
 
 	.footer__inner {
 		padding-top: 30px;
