@@ -252,6 +252,40 @@
 }
 
 @media (max-width:770px) {
+	.howitworks__item {
+		flex-wrap: wrap;
+	}
+
+	.howitworks__item.item-center {
+		.howitworks__item-images {
+			order: -1;
+		}
+	}
+
+	.howitworks__item-info {
+		margin-bottom: 20px;
+	}
+
+	.howitworks__item-images {
+		padding: 0 10px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+
+	.item-info__title {
+		text-align: center;
+	}
+
+	.item-info__text {
+		max-width: 100%;
+		padding: 0 10px;
+	}
+
+	.item-info__link {
+		display: block;
+		margin: 0 auto;
+	}
+
 	.terms__title {
 		padding: 20px 30px 20px;
 	}
@@ -332,6 +366,10 @@
 }
 
 @media (max-width:450px) {
+	.item-info__title {
+		margin-bottom: 20px;
+	}
+
 	.page-404__iamage {
 		background-size: contain;
 		height: 330px;

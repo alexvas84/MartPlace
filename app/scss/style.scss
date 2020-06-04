@@ -3763,20 +3763,19 @@ body.mouse .menu .menu__list:hover {
 	}
 }
 
-
 .howitworks__item {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	min-height: 547px;
 	padding: 20px 0;
-	margin: 0 -5px;
+	margin: 0 -10px;
 }
 
 .howitworks__item-images {
-	width: 458px;
-	height: 353px;
-	padding: 0 5px;
+	max-width: 458px;
+	max-height: 353px;
+	margin: 0 10px;
 
 	img {
 		display: block;
