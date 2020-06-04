@@ -3570,6 +3570,13 @@ body.mouse .menu .menu__list:hover {
 
 // end favourites
 
+//start recorver pass
+
+.recover.page-content {
+	flex: 1 0 auto;
+}
+
+//end recover pass
 
 //start login
 
@@ -3589,7 +3596,6 @@ body.mouse .menu .menu__list:hover {
 	max-width: 555px;
 	border-radius: 4px;
 	box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-
 }
 
 .login__top,
