@@ -270,9 +270,31 @@
 	}
 }
 
+@media (max-width:600px) {
+
+	.login__inner,
+	.register__inner,
+	.recover__inner {
+		padding-top: 50px;
+		padding-bottom: 70px;
+	}
+}
+
 @media (max-width:500px) {
 	.page-404__inner {
 		padding: 30px 0 50px;
+	}
+
+	.login__form,
+	.register__form,
+	.recover__form {
+		padding: 20px 20px 30px;
+	}
+
+	.login__top,
+	.register__top,
+	.recover__top {
+		padding: 25px 10px 25px;
 	}
 }
 
