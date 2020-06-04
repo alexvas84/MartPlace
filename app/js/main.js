@@ -55,7 +55,6 @@ $(function () {
 
 	// PRODUCT CART GRID/LIST view
 
-
 	let btn_grid = document.querySelector('.icon-grid');
 	let btn_list = document.querySelector('.icon-List');
 	let product = document.querySelectorAll('.product__cart');
@@ -94,11 +93,7 @@ $(function () {
 						rate_block[i].insertBefore(raiting[i], rate_block[i].children['first']);
 						rate_block[i].insertBefore(product_sell[i], rate_block[i].children['last']);
 					};
-
-					// theme_block[i].insertBefore(product_type[i], info_block[i].children['last']);
-
-					bottom_block[i].insertBefore(likes[i], bottom_block[i].children[1]);
-
+					// bottom_block[i].insertBefore(likes[i], bottom_block[i].children[1]);
 				};
 			};
 		});
@@ -125,29 +120,18 @@ $(function () {
 
 	//SCROLL MENU
 
-
 	window.addEventListener('scroll', (e) => {
-
 		if (document.documentElement.scrollTop > 100) {
 			header_top.classList.add('scroll');
 			header_bottom.classList.add('scroll');
-
-			console.log(header_top);
 		} else {
 			header_top.classList.remove('scroll');
 			header_bottom.classList.remove('scroll');
 		};
-
-
-		// console.log(document.documentElement.scrollTop);
-
-
 	});
 
-
-
 	//проверяем является ли устройство мобилкой
-
+	//isMobile.any() - if mobile
 
 	let isMobile = {
 		Android: function () { return navigator.userAgent.match(/Android/i); },
@@ -157,9 +141,6 @@ $(function () {
 		Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
 		any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
 	};
-
-	//isMobile.any() - if mobile
-
 
 	let burger_btn = document.querySelector('.header__burger');
 	const main_menu = document.querySelector('.menu');
@@ -230,16 +211,18 @@ $(function () {
 	mql.addListener(menu_in_burger); // Добавим прослушку на смену результата
 	menu_in_burger(mql); // Вызовем нашу функцию
 
-
-
 	//слушаем 890px и переносим кнопку Seller в Бургер Меню
+
 	const header_top = document.querySelector('.header__inner');
 	const header_bottom = document.querySelector('.header__bottom-inner');
 	function sell_btn_to_bottom(md890) {
 		let sell_btn = document.querySelector('.header__btn');
 		const header_menu = document.querySelector('.header__menu');
-		if (md890.matches) { console.log(main_menu); main_menu.prepend(sell_btn); }
-		else { header_top.children[1].before(sell_btn); };
+		if (md890.matches) {
+			main_menu.prepend(sell_btn);
+		} else {
+			header_top.children[1].before(sell_btn);
+		};
 	};
 
 	let md890 = window.matchMedia("(max-width:890px)");
@@ -247,7 +230,27 @@ $(function () {
 	sell_btn_to_bottom(md890);
 
 
-	//
+	//слушаем 400px и уменьшаем пагинацию
+	const pagitation = document.querySelectorAll('.pagination__list>li');
+
+	function cutPagination(md400) {
+		if (md400.matches) {
+			if (pagitation.length > 3) {
+				pagitation[1].style.display = "none";
+			}
+		} else {
+			if (pagitation[1].style.display == "none") {
+				pagitation[1].style.display = "inline-block";
+			};
+		};
+	};
+
+	let md400 = window.matchMedia("(max-width:400px)");
+	md400.addListener(cutPagination);
+	cutPagination(md400);
+
+	// USER BUTTON
+
 	try {
 		let user_menu = document.querySelector('.header__btn-menu');
 		let user_box = document.querySelector('.header__box');
