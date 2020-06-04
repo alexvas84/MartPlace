@@ -123,6 +123,28 @@ $(function () {
 	} catch{ };
 
 
+	//SCROLL MENU
+
+
+	window.addEventListener('scroll', (e) => {
+
+		if (document.documentElement.scrollTop > 100) {
+			header_top.classList.add('scroll');
+			header_bottom.classList.add('scroll');
+
+			console.log(header_top);
+		} else {
+			header_top.classList.remove('scroll');
+			header_bottom.classList.remove('scroll');
+		};
+
+
+		// console.log(document.documentElement.scrollTop);
+
+
+	});
+
+
 
 	//проверяем является ли устройство мобилкой
 
@@ -140,7 +162,7 @@ $(function () {
 
 
 	let burger_btn = document.querySelector('.header__burger');
-	let main_menu = document.querySelector('.menu');
+	const main_menu = document.querySelector('.menu');
 	// let header_menu = document.querySelector('.header__menu');
 	let body = document.querySelector('body');
 	let overlay = document.querySelector('.burger__menu-overlay');
@@ -201,6 +223,7 @@ $(function () {
 			body.classList.add('mouse');
 			body.classList.remove('touch');
 		};
+
 	};
 
 	let mql = window.matchMedia("(max-width:930px)");
@@ -208,6 +231,23 @@ $(function () {
 	menu_in_burger(mql); // Вызовем нашу функцию
 
 
+
+	//слушаем 890px и переносим кнопку Seller в Бургер Меню
+	const header_top = document.querySelector('.header__inner');
+	const header_bottom = document.querySelector('.header__bottom-inner');
+	function sell_btn_to_bottom(md890) {
+		let sell_btn = document.querySelector('.header__btn');
+		const header_menu = document.querySelector('.header__menu');
+		if (md890.matches) { console.log(main_menu); main_menu.prepend(sell_btn); }
+		else { header_top.children[1].before(sell_btn); };
+	};
+
+	let md890 = window.matchMedia("(max-width:890px)");
+	md890.addListener(sell_btn_to_bottom);
+	sell_btn_to_bottom(md890);
+
+
+	//
 	try {
 		let user_menu = document.querySelector('.header__btn-menu');
 		let user_box = document.querySelector('.header__box');
@@ -216,9 +256,7 @@ $(function () {
 			user_box.classList.toggle('active');
 		});
 
-
 	} catch { };
-
 
 
 	/* 	let user_box = document.querySelector('.header__client');
@@ -243,15 +281,16 @@ $(function () {
 		let mega_btn = document.querySelector('.mega__list');
 
 		mega_btn.addEventListener('mouseover', (e) => {
-			let distance = document.querySelector('.mega__list').getBoundingClientRect();
-			let container = document.querySelector('.container').getBoundingClientRect();
-			let mega_menu = document.querySelector('.mega-menu');
-			let left = distance.left - container.left - 15;
-			mega_menu.style.left = "-" + left + "px";
-		}, false);
+			if (window.innerWidth > 930) {
+				let distance = document.querySelector('.mega__list').getBoundingClientRect();
+				let container = document.querySelector('.container').getBoundingClientRect();
+				let mega_menu = document.querySelector('.mega-menu');
+				let left = distance.left - container.left - 15;
+				mega_menu.style.left = "-" + left + "px";
+			};
 
-	}
-	catch{ };
+		}, false);
+	} catch{ };
 
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",

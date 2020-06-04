@@ -5,6 +5,12 @@
 
 // Header-top
 .header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
 	.header__top {
 		background-color: $grey;
 	}
@@ -14,6 +20,39 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 100px;
+		transition: height 0.1s;
+	}
+
+	.header__inner.scroll {
+		height: 70px;
+
+		.notification__box,
+		.mail__box,
+		.cart__box {
+			position: relative;
+			padding-bottom: 7px;
+			margin-top: 7px;
+		}
+
+		.submenu.notification__menu {
+			top: 62px;
+		}
+
+		.mail__box::before,
+		.notification__box::before,
+		.cart__box::before,
+		.header__client::before {
+			bottom: -2px;
+		}
+
+		.header__client {
+			padding-bottom: 10px;
+			margin-top: 10px;
+		}
+
+		.submenu.header__client-submenu {
+			top: 60px;
+		}
 	}
 
 	&__btn {
@@ -42,6 +81,7 @@
 			padding-bottom: 25px;
 			margin-top: 25px;
 		}
+
 	}
 
 	&__client {
@@ -122,6 +162,7 @@
 
 .header__client::before {
 	bottom: 1px;
+	right: 10px;
 }
 
 .mail__box:hover,
@@ -195,7 +236,7 @@
 		min-width: 22px;
 		border-radius: 11px;
 		text-align: center;
-		top: -8px;
+		top: -3px;
 		left: 27px;
 		padding-left: 5px;
 		padding-right: 5px;
@@ -588,12 +629,26 @@
 }
 
 .header__bottom {
+	background-color: #f3f3f8;
 
 	&-inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 80px;
+		transition: height .2s;
+	}
+
+	.submenu {
+		top: 80px;
+	}
+
+	.header__bottom-inner.scroll {
+		height: 55px;
+
+		.submenu {
+			top: 67px;
+		}
 	}
 
 	.header__inner-search {
@@ -669,7 +724,6 @@ body.mouse .menu .menu__list:hover {
 	}
 }
 
-
 .header__burger {
 	display: none;
 }
@@ -724,6 +778,7 @@ body.mouse .menu .menu__list:hover {
 // Search section
 
 .search {
+	margin-top: 180px;
 	text-align: center;
 	height: 725px;
 	background-color: #294cce;
@@ -3002,7 +3057,7 @@ body.mouse .menu .menu__list:hover {
 
 .page-404__iamage {
 	display: block;
-	width: 393px;
+	max-width: 393px;
 	height: 447px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -4097,8 +4152,6 @@ body.mouse .menu .menu__list:hover {
 		color: #898f96;
 	}
 }
-
-
 
 .aside__item-list {
 	padding: 15px 35px 5px 25px;

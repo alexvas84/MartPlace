@@ -24,9 +24,24 @@
 	}
 }
 
+@media (max-width:890px) {
+	.header__bottom .menu .header__btn {
+		margin-left: 0;
+		top: 27px;
+		position: absolute;
+		padding: 5px 10px;
+		font-size: 15px;
+	}
+
+}
+
 @media (max-width:930px) {
 	body.lock {
 		overflow: hidden;
+	}
+
+	.submenu.mega-menu {
+		display: none !important;
 	}
 
 	/* body.touch .arrow */
@@ -64,42 +79,6 @@
 				line-height: 15px;
 			}
 		}
-
-		&.mega-menu {
-			position: relative;
-			display: block !important;
-			width: 100%;
-			height: auto;
-
-			.submenu__title {
-				margin-left: 0;
-				color: #fff;
-			}
-
-			a {
-				font-size: 12px;
-			}
-
-			.submenu__col {
-				position: relative;
-				min-width: 100%;
-				;
-			}
-
-			.submenu__inner {
-				position: relative;
-				top: 10px;
-				left: 0;
-				display: none;
-				padding-left: 10px;
-				margin-bottom: 30px;
-				column-count: 2;
-
-				&.open {
-					display: block;
-				}
-			}
-		}
 	}
 
 	.header__logo {
@@ -117,12 +96,11 @@
 		transition: transform .5s ease;
 
 		&.active {
-			top: -44px;
-			right: 0;
-			position: relative;
-			margin-bottom: 50px;
+			top: 35px;
+			left: 80%;
+			position: absolute;
 			align-self: flex-end;
-			transition: transform .5s ease;
+
 		}
 
 		&::before,
@@ -133,7 +111,7 @@
 			width: 100%;
 			height: 2px;
 			left: 0;
-
+			transition: transform .5s ease;
 		}
 
 		&::before {
@@ -177,7 +155,7 @@
 		.menu {
 			overflow: auto;
 			position: fixed;
-			padding: 100px 50px;
+			padding: 100px 50px 20px;
 			top: 0;
 			z-index: 1;
 			left: -100%;
@@ -199,8 +177,8 @@
 			a {
 				display: block;
 				color: #fff;
-				font-size: 25px;
-				line-height: 22px;
+				font-size: 18px;
+				line-height: 25px;
 				margin: 0;
 				padding: 0;
 			}
@@ -213,17 +191,16 @@
 
 			li+li {
 				margin-left: 0;
-				margin-top: 40px;
+				margin-top: 15px;
 			}
 
 			.submenu {
 				position: relative;
 				top: 20px;
 				left: 0;
+				margin-bottom: 20px;
 			}
 		}
-
-
 	}
 
 	.header__btn-menu {
@@ -278,9 +255,38 @@
 	}
 }
 
+@media (max-width:500px) {
+	.page-404__inner {
+		padding: 30px 0 50px;
+	}
+}
+
 @media (max-width:450px) {
+	.page-404__iamage {
+		background-size: contain;
+		height: 330px;
+	}
+
+	.page-404__title {
+		margin: 25px 0 25px;
+	}
+
 	.footer__copy {
 		text-align: center;
+	}
+}
+
+@media (max-width:400px) {
+	.page-404__title {
+		font-size: 25px;
+	}
+
+	.page-404__title {
+		margin: 10px 0 25px;
+	}
+
+	.page-404__inner {
+		padding: 10px 0 25px;
 	}
 }
 
