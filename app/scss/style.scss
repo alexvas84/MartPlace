@@ -3080,7 +3080,6 @@ body.mouse .menu .menu__list:hover {
 
 //start contact
 
-
 .contact-title {
 	display: flex;
 	justify-content: center;
@@ -3116,6 +3115,7 @@ body.mouse .menu .menu__list:hover {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0 -15px;
 
 	p,
 	a {
@@ -3128,7 +3128,8 @@ body.mouse .menu .menu__list:hover {
 }
 
 .contact__item {
-	flex: 0 1 360px;
+	margin: 0 15px;
+	flex: 0 1 33.3333%;
 	min-height: 296px;
 	text-align: center;
 	padding: 40px;
@@ -3156,7 +3157,7 @@ body.mouse .menu .menu__list:hover {
 .contact__form {
 	margin-top: 50px;
 	background-color: #fff;
-	padding: 60px 0;
+	padding: 60px 10px;
 }
 
 .contact__form-title {
@@ -3183,7 +3184,7 @@ body.mouse .menu .menu__list:hover {
 		height: 50px;
 		margin-bottom: 30px;
 		border: 1px solid #e7e7e7;
-		padding: 0 50px;
+		padding: 0 10px 0 50px;
 
 		&::placeholder {
 			font-size: 16px;
@@ -3219,6 +3220,13 @@ body.mouse .menu .menu__list:hover {
 			color: $btn;
 			border: 1px solid $btn;
 		}
+	}
+}
+
+.contact__form-location {
+	iframe {
+		height: 400px;
+		width: 100%;
 	}
 }
 

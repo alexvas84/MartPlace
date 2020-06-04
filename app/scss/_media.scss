@@ -19,9 +19,21 @@
 	}
 }
 
-@media (max-width:1150px) {}
-
 @media (max-width:1050px) {
+	.page-contact__inner {
+		padding: 70px 0;
+	}
+
+	.contact__box {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.contact__item {
+		margin-bottom: 20px;
+		flex-basis: 80%;
+	}
+
 	.footer__info {
 		flex-wrap: wrap;
 		padding-bottom: 30px;
@@ -242,6 +254,21 @@
 }
 
 @media (max-width:890px) {
+	.contact__form__inner {
+		input {
+			flex-basis: 100%;
+			padding: 0 20px;
+		}
+
+		textarea {
+			padding: 20px 20px;
+		}
+	}
+
+	.contact__form-location iframe {
+		height: 350px;
+	}
+
 	.header__bottom .menu .header__btn {
 		margin-left: 0;
 		top: 27px;
