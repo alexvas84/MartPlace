@@ -3,7 +3,6 @@ html {
 	height: 100%;
 }
 
-
 *,
 *::before,
 
@@ -28,6 +27,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 }
+
 
 body {
 	font-family: 'Quicksand', sans-serif;
@@ -199,7 +199,6 @@ p {
 	font-size: 16px;
 	line-height: 30px;
 	color: #555555;
-	margin-bottom: 50px;
 	margin: 0 auto 50px;
 	max-width: 705px;
 	text-align: center;
@@ -344,7 +343,7 @@ p {
 .arrow {
 	display: none;
 	position: absolute;
-	top: 5px;
+	top: 19px;
 	right: 0;
 	width: 0;
 	height: 0;
@@ -355,6 +354,7 @@ p {
 
 	&.active {
 		transform: rotate(-180deg);
-		top: 5px;
+		top: 19px;
+		border-top: 15px solid $btn;
 	}
 }
