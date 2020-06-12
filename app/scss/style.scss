@@ -5,7 +5,6 @@
 
 // Header-top
 .header {
-	// position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -27,17 +26,15 @@
 		margin-left: auto;
 		padding: 12px 18px;
 		margin-right: 48px;
-		width: 140px;
+		min-width: 140px;
 	}
 
 	.header__notifications {
-		// position: relative;
 		margin-right: 28px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 20px;
-		// z-index: 50;
 
 		.notification__box,
 		.mail__box,
@@ -53,11 +50,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		// z-index: 3;
 		padding-bottom: 25px;
 		margin-top: 25px;
-
-		&:hover .header__client-submenu {
+		/* 
+		&.hover:hover .header__client-submenu {
 			display: block;
 			visibility: visible;
 			opacity: 1;
@@ -72,47 +68,74 @@
 			100% {
 				opacity: 1;
 			}
+		} */
+
+		.header__client-submenu {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+			animation: fade .5s;
+
+			&.active {
+				display: block;
+				visibility: visible;
+				opacity: 1;
+				animation: fade .5s;
+			}
+
+			@keyframes fade {
+				0% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
 		}
-	}
 
-	.header__avatar {
-		flex: 0 0 50px;
-		width: 50px;
-		height: 50px;
-		background-color: #7c7979;
-		border-radius: 50%;
-		overflow: hidden;
+		.header__avatar {
+			flex: 0 0 50px;
+			width: 50px;
+			height: 50px;
+			background-color: #7c7979;
+			border-radius: 50%;
+			overflow: hidden;
+			cursor: pointer;
 
-		img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-			object-position: center;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
 		}
-	}
 
-	.header__bayer {
-		margin-left: 20px;
-		font-weight: 500;
-		line-height: 22px;
+		.header__bayer {
+			margin-left: 20px;
+			font-weight: 500;
+			line-height: 22px;
 
-		span {
-			display: block;
+			span {
+				display: block;
+			}
 		}
-	}
 
-	.header__name {
-		font-family: "Quicksand-Medium";
-		font-weight: 500;
-		font-size: 16px;
-		color: $text;
-	}
+		.header__name {
+			font-family: "Quicksand-Medium";
+			font-weight: 500;
+			font-size: 16px;
+			color: $text;
+		}
 
-	.header__price {
-		font-size: 15px;
-		color: $btn;
+		.header__price {
+			font-size: 15px;
+			color: $btn;
+		}
 	}
 }
+
+//triangle 
 
 .mail__box::before,
 .notification__box::before,
@@ -136,10 +159,10 @@
 	right: 10px;
 }
 
-.hover .mail__box:hover,
-.hover .notification__box:hover,
-.hover .cart__box:hover,
-.hover .header__client:hover {
+.header__client.hover,
+.header__notifications.hover .mail__box:hover,
+.header__notifications.hover .notification__box:hover,
+.header__notifications.hover .cart__box:hover {
 	&::before {
 		display: block;
 		visibility: visible;
@@ -158,9 +181,9 @@
 	}
 }
 
-.hover .mail__box:hover .notification__menu,
-.hover .notification__box:hover .notification__menu,
-.hover .cart__box:hover .notification__menu {
+.header__notifications.hover .mail__box:hover .notification__menu,
+.header__notifications.hover .notification__box:hover .notification__menu,
+.header__notifications.hover .cart__box:hover .notification__menu {
 	display: block;
 	visibility: visible;
 	opacity: 1;
@@ -729,12 +752,6 @@ body.mouse .menu .menu__list:hover {
 	display: flex;
 	align-items: center;
 	z-index: 1;
-}
-
-// USER MENU 1 2 3
-.header__btn-menu {
-	display: none;
-	z-index: 2;
 }
 
 .btn-menu__image {
@@ -3800,6 +3817,7 @@ body.mouse .menu .menu__list:hover {
 	text-align: center;
 	font-size: 36px;
 	margin-bottom: 22px;
+	position: relative;
 }
 
 .pricing__item-list {
@@ -3855,6 +3873,8 @@ body.mouse .menu .menu__list:hover {
 	padding: 19px 10px 17px;
 	border-radius: 3px;
 }
+
+
 
 //end pricingplan
 

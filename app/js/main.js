@@ -85,32 +85,40 @@ $(function () {
 		var mixer = mixitup('.newitem__inner-box');
 	} catch { };
 
-	//SCROLL MENU
-	/* 
-		window.addEventListener('scroll', (e) => {
-			console.log(document.documentElement.scrollTop);
-			if (document.documentElement.scrollTop > 100) {
-				headerTop.classList.add('scroll');
-				header_bottom.classList.add('scroll');
-			} else {
-	
-				headerTop.classList.remove('scroll');
-				header_bottom.classList.remove('scroll');
-			};
-		}); */
 
-	// filter menu
+
+
+	//проверяем является ли устройство мобилкой
+	//isMobile.any() - if mobile
+
+	let isMobile = {
+		Android: function () { return navigator.userAgent.match(/Android/i); },
+		BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+		iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+		Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+		Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+		any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+	};
+
+
+	// filter menu on main page
 
 	let filterBtn = document.querySelector('.filter-btn');
 	let filterMenu = document.querySelector('.filter-box');
 	let filterLink = document.querySelectorAll('.filter-box__link');
 	try {
-		filterBtn.addEventListener('mouseover', (e) => {
-			if (!filterMenu.classList.contains('_active')) {
-				filterBtn.click();
+		if (!isMobile.any()) {
 
-			};
-		});
+			filterBtn.addEventListener('mouseenter', (e) => {
+				if (!filterMenu.classList.contains('_active')) {
+					filterBtn.click();
+				};
+			});
+
+			filterMenu.addEventListener('mouseleave', (e) => {
+				filterMenu.classList.remove('_active');
+			});
+		};
 
 		filterBtn.addEventListener('click', (e) => {
 			filterMenu.classList.toggle('_active');
@@ -121,20 +129,11 @@ $(function () {
 			filterMenu.classList.remove('_active');
 		});
 
-		filterMenu.addEventListener('mouseleave', (e) => {
-			filterMenu.classList.remove('_active');
-		});
 
-		document.addEventListener('click', (e) => {
-			if (filterMenu.classList.contains('_active') && (!e.target.closest('.filter-box') || !e.target.closest('.filter-btn'))) {
-				filterMenu.classList.remove('_active');
-			};
-		});
 	} catch{ };
 
 
-
-	// PRODUCT CART GRID/LIST view
+	// PRODUCT CART GRID/LIST view 
 
 	let btnGrid = document.querySelector('.icon-grid');
 	let btnList = document.querySelector('.icon-List');
@@ -199,18 +198,7 @@ $(function () {
 	} catch{ };
 
 
-
-	//проверяем является ли устройство мобилкой
-	//isMobile.any() - if mobile
-
-	let isMobile = {
-		Android: function () { return navigator.userAgent.match(/Android/i); },
-		BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
-		iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-		Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
-		Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
-		any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
-	};
+	// burger menu click
 
 	const burgerBtn = document.querySelector('.header__burger');
 	const mainMenu = document.querySelector('.menu');
@@ -222,7 +210,6 @@ $(function () {
 		burgerBtn.addEventListener('click', (e) => {
 			if (e.target.closest('.header__burger')) toggleMenu();
 		}, false);
-
 
 		mainMenu.addEventListener('click', (e) => {
 			if (e.target.tagName == 'A' && body.classList.contains('touch')) toggleMenu();
@@ -262,9 +249,7 @@ $(function () {
 				};
 				thisSubmenu.classList.toggle('open');
 				thisArrow.classList.toggle('active');
-
 			};
-
 		});
 	};
 
@@ -286,13 +271,11 @@ $(function () {
 			body.classList.add('mouse');
 			body.classList.remove('touch');
 		};
-
 	};
 
 	let mql = window.matchMedia("(max-width:930px)");
 	mql.addListener(menu_in_burger); // Добавим прослушку на смену результата
 	menu_in_burger(mql); // Вызовем нашу функцию
-
 
 
 	//слушаем 890px и переносим кнопку Seller в Бургер Меню
@@ -313,7 +296,7 @@ $(function () {
 	sellBtnToBottom(md890);
 
 
-	//слушаем 1190 и убираем просмотр в стиле LIST
+	//слушаем 1190px и убираем просмотр в стиле LIST при адаптации
 	try {
 		function listRemove(md1190) {
 			if (md1190.matches)
@@ -326,20 +309,27 @@ $(function () {
 	} catch{ };
 
 
-	//move user menu in burger menu
+	//move user notification in user menu
+
+	const userMenu = document.querySelector('.header__client-submenu');
+	const userBtn = document.querySelector('.header__client');
+	const userNotification = document.querySelector('.header__notifications');
 	try {
 		function userboxRemove(md480) {
+
 			let userBox = document.querySelector('.header__box');
 			if (md480.matches) {
-				headerMenu.prepend(userBox);
-				userBox.classList.remove('hover');
-				userBox.classList.add('active');
+				userMenu.prepend(userNotification);
+				userNotification.classList.remove('hover');
+				// userBox.classList.remove('hover');
+				// userBtn.classList.remove('hover');
 			} else {
-				headerTop.append(userBox);
-				userBox.classList.add('hover');
+				userBox.prepend(userNotification);
+				// userBox.classList.add('hover');
+				userNotification.classList.add('hover');
+				// userBtn.classList.add('hover');
 			};
 		};
-
 	} catch{ };
 
 	let md480 = window.matchMedia("(max-width:480px)");
@@ -348,7 +338,7 @@ $(function () {
 
 	//слушаем 400px и уменьшаем пагинацию
 
-	/* try {
+	try {
 		const pagitation = document.querySelectorAll('.pagination__list>li');
 
 		function cutPagination(md400) {
@@ -367,23 +357,8 @@ $(function () {
 		md400.addListener(cutPagination);
 		cutPagination(md400);
 
-	} catch { }; */
-
-
-	// USER BUTTON
-
-	try {
-		let userBox = document.querySelector('.header__box');
-		let userMenu = document.querySelector('.header__btn-menu');
-		userMenu.addEventListener('click', (e) => {
-			if (window.innerWidth <= 480) {
-				burgerBtn.click();
-			} else {
-				userBox.classList.toggle('active');
-			};
-		});
-
 	} catch { };
+
 
 	// mega menu на всю длинну
 
@@ -403,6 +378,38 @@ $(function () {
 	} catch{ };
 
 
+	//user menu show/hide on mouse move
+
+	if (!isMobile.any()) {
+		userBtn.addEventListener('mouseenter', (e) => {
+			userMenu.classList.add('active');
+			userBtn.classList.add('hover');
+		});
+
+		userBtn.addEventListener('mouseleave', (e) => {
+			userMenu.classList.remove('active');
+			userBtn.classList.remove('hover');
+		});
+	};
+
+	//Ловим нажатия
+	document.addEventListener('click', (e) => {
+		//filter menu
+		if (filterMenu && (filterMenu.classList.contains('_active') && (!e.target.closest('.filter-box') || !e.target.closest('.filter-btn')))) {
+			filterMenu.classList.remove('_active');
+		};
+		//user menu
+		if (e.target.closest('.header__client') && !e.target.closest('.header__client-submenu')) {
+			userMenu.classList.toggle('active');
+			userBtn.classList.toggle('hover');
+		};
+
+		if (e.target.tagName == 'A' && e.target.closest('.header__client-submenu')) {
+			userMenu.classList.remove('active');
+			userBtn.classList.remove('hover');
+		};
+	});
+
 
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",
@@ -412,7 +419,6 @@ $(function () {
 		to: 300,
 		prefix: "$"
 	});
-
 
 
 	$('.product-one__tabs .tab, .blog-tabs .tab').on('click', function (event) {

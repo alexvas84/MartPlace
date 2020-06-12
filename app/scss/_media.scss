@@ -292,7 +292,6 @@
 		overflow: hidden;
 	}
 
-
 	.header {
 
 		.header__inner {
@@ -311,8 +310,8 @@
 		.header__notifications .mail__box,
 		.header__notifications .cart__box,
 		.header__client {
-			padding-bottom: 8px;
-			margin-top: 8px;
+			padding-bottom: 9px;
+			margin-top: 9px;
 		}
 
 		.submenu.notification__menu {
@@ -321,13 +320,16 @@
 
 		.mail__box::before,
 		.notification__box::before,
-		.cart__box::before,
+		.cart__box::before {
+			bottom: 1px;
+		}
+
 		.header__client::before {
-			bottom: -2px;
+			bottom: -1px;
 		}
 
 		.submenu.header__client-submenu {
-			top: 60px;
+			top: 59px;
 		}
 	}
 
@@ -564,7 +566,7 @@
 	.header__menu .header__btn {
 		margin-top: 20px;
 		margin-right: 0;
-		width: 140px;
+		// min-width: 140px;
 		align-self: flex-end;
 	}
 }
@@ -743,35 +745,8 @@
 		padding: 60px 0 60px;
 	}
 
-	//user menu
-
-	.header__btn-menu {
-		display: flex;
-		width: 80px;
-		height: 70px;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		right: 0;
-		top: 0;
-		background-color: $grey;
-	}
-
-	.header .header__client {
+	.header .header__bayer {
 		display: none;
-	}
-
-	.header .header__notifications {
-		margin-right: 0;
-	}
-
-	.header__box {
-		transition: all .3s;
-		transform: translateX(80px);
-
-		&.active {
-			transform: translateX(-80px);
-		}
 	}
 
 	.filter__inner {
@@ -998,15 +973,14 @@
 		}
 	}
 
-	.header__box {
-		position: absolute;
-		transform: translateX(-80px);
-		right: 0;
-		top: 35px;
-		right: -60px;
+	.header .header__notifications {
+		margin-right: 0;
+		padding-bottom: 30px;
+		padding-top: 20px;
+		border-bottom: 1px solid $text;
+		margin-bottom: 20px;
 	}
 }
-
 
 @media (max-width:450px) {
 	.aside__line {
